@@ -19,6 +19,6 @@ public class ScoreCounter : MonoBehaviour
 
         CurrentScore += CurrentTime * ScoreMultiplier;
 
-        ScoreText.text = (Mathf.Floor(CurrentScore*100)).ToString();
+        ScoreText.text = "Score: " + (Mathf.Floor(CurrentScore*100)).ToString();
     }
 }

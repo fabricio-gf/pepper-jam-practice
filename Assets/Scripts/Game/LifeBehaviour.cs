@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class LifeBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Explosion;
 
-    // Update is called once per frame
-    void Update()
+    public float Health;
+
+    public void TakeDamage(float Damage)
     {
-        
+        Health -= Damage;
+
+        if (Health <= 0)
+        {
+            //spawn explosion
+            Destroy(gameObject);
+        }
     }
 }
