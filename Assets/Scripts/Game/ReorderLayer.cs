@@ -14,6 +14,6 @@ public class ReorderLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mrender.sortingOrder = Mathf.CeilToInt((transform.parent.position.y + 10) * 100);
+        mrender.sortingOrder = Mathf.CeilToInt((-transform.parent.position.y + 10) * 100);
     }
 }
