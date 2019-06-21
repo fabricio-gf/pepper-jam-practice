@@ -549,30 +549,6 @@ class EntityLayer extends ut.Component {
 
 }
 declare namespace game {
-
-class NewBehaviour_State extends ut.Component {
-  constructor(initialized?: boolean, enabled?: boolean, onEnableCalled?: boolean, onDisableCalled?: boolean);
-  initialized: boolean;
-  enabled: boolean;
-  onEnableCalled: boolean;
-  onDisableCalled: boolean;
-  static readonly initialized: ComponentFieldDesc;
-  static readonly enabled: ComponentFieldDesc;
-  static readonly onEnableCalled: ComponentFieldDesc;
-  static readonly onDisableCalled: ComponentFieldDesc;
-  static readonly cid: number;
-  static readonly _view: any;
-  static readonly _isSharedComp: boolean;
-
-  static _size: number;
-  static _fromPtr(p: number, v?: NewBehaviour_State): NewBehaviour_State;
-  static _toPtr(p: number, v: NewBehaviour_State): void;
-  static _tempHeapPtr(v: NewBehaviour_State): number;
-  static _dtorFn(v: NewBehaviour_State): void;
-}
-
-}
-declare namespace game {
 var BulletSystemJS: ut.SystemJS;
 }
 declare namespace game {

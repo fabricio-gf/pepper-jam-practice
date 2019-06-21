@@ -394,22 +394,6 @@ namespace ut.EditorExtensions
 
     }
 }
-namespace game
-{
-    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public struct NewBehaviour_State : UTiny.IComponentData
-    {
-
-
-        public bool initialized;
-        public bool enabled;
-        public bool onEnableCalled;
-        public bool onDisableCalled;
-
-
-
-    }
-}
 
 
 

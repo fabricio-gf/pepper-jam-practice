@@ -390,36 +390,6 @@
 */
 /**
 
-@component
-@memberof game
-@name NewBehaviour_State
-*/
-/**
-
-@member {bool}
-@memberof game.NewBehaviour_State
-@name initialized
-*/
-/**
-
-@member {bool}
-@memberof game.NewBehaviour_State
-@name enabled
-*/
-/**
-
-@member {bool}
-@memberof game.NewBehaviour_State
-@name onEnableCalled
-*/
-/**
-
-@member {bool}
-@memberof game.NewBehaviour_State
-@name onDisableCalled
-*/
-/**
-
 @system
 @memberof game
 @name BulletSystemJS

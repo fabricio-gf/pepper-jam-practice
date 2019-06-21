@@ -113,8 +113,8 @@
         }, {
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/bindings.js",
-                "Size": 118805,
-                "CompressedSize": 9905
+                "Size": 113872,
+                "CompressedSize": 9413
             }
         }, {
             "Item": {
@@ -125,15 +125,15 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/PepperJam/html5/development/artifacts/scripts/tsc-emit.js",
-                    "Size": 18902,
-                    "CompressedSize": 3661
+                    "Size": 20400,
+                    "CompressedSize": 3942
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/main.js",
-                "Size": 4947,
-                "CompressedSize": 1276
+                "Size": 3007,
+                "CompressedSize": 880
             }
         }, {
             "Item": {

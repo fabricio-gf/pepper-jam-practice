@@ -5,35 +5,24 @@ namespace game {
     export class BulletSystem extends ut.ComponentSystem {
         
         static bulletOffset: Vector3 = new Vector3(5,0,0);
-
-        OnEnable():void {
-
-            let playerPosition;
-            
-            this.world.forEach([ut.Core2D.TransformLocalPosition, PlayerTag], (objPos) => {
-                playerPosition = objPos.position;
-            });
-
-            console.log(playerPosition);
-
-            this.world.forEach([ut.Core2D.TransformLocalPosition, BulletTag], (objPos, bulletTag) => {
-                objPos.position = playerPosition.add(game.BulletSystem.bulletOffset);
-            });
-        }
+        static isAwake: boolean = false;
 
         OnUpdate():void {
 
-            //let dt = this.scheduler.deltaTime();
-
-            //move bullet
-            // this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], (bullet, vector, position, move) => {
-            //     console.log("Moving bullet");
+            if(!game.BulletSystem.isAwake){
+                let playerPosition;
                 
-            //     let localPosition = position.position;
-            //     localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
+                this.world.forEach([ut.Core2D.TransformLocalPosition, PlayerTag], (objPos) => {
+                    playerPosition = objPos.position;
+                });
 
-            //     position.position = localPosition;
-            // });
+                console.log(playerPosition);
+
+                this.world.forEach([ut.Core2D.TransformLocalPosition, BulletTag], (objPos, bulletTag) => {
+                    objPos.position = playerPosition.add(game.BulletSystem.bulletOffset);
+                });
+                game.BulletSystem.isAwake = true;
+            }
 
             //bullet hits something
             this.world.forEach([ut.Entity, game.BulletTag, ut.HitBox2D.HitBoxOverlapResults], (bullet, move, bulletTag, results) => {

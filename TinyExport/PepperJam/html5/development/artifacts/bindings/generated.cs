@@ -224,16 +224,6 @@ namespace ut.HitBox2D
 }
 namespace game
 {
-    public struct NewBehaviour_State : IComponentData
-    {
-        public bool initialized;
-        public bool enabled;
-        public bool onEnableCalled;
-        public bool onDisableCalled;
-    }
-}
-namespace game
-{
     public class BulletSystemJS : IComponentSystem
     {
     }

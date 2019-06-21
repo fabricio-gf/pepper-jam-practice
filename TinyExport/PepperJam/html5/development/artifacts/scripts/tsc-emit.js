@@ -25,32 +25,26 @@ var game;
         function BulletSystem() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        BulletSystem.prototype.OnEnable = function () {
-            var playerPosition;
-            this.world.forEach([ut.Core2D.TransformLocalPosition, game.PlayerTag], function (objPos) {
-                playerPosition = objPos.position;
-            });
-            console.log(playerPosition);
-            this.world.forEach([ut.Core2D.TransformLocalPosition, game.BulletTag], function (objPos, bulletTag) {
-                objPos.position = playerPosition.add(game.BulletSystem.bulletOffset);
-            });
-        };
         BulletSystem.prototype.OnUpdate = function () {
-            //let dt = this.scheduler.deltaTime();
             var _this = this;
-            //move bullet
-            // this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], (bullet, vector, position, move) => {
-            //     console.log("Moving bullet");
-            //     let localPosition = position.position;
-            //     localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
-            //     position.position = localPosition;
-            // });
+            if (!game.BulletSystem.isAwake) {
+                var playerPosition_1;
+                this.world.forEach([ut.Core2D.TransformLocalPosition, game.PlayerTag], function (objPos) {
+                    playerPosition_1 = objPos.position;
+                });
+                console.log(playerPosition_1);
+                this.world.forEach([ut.Core2D.TransformLocalPosition, game.BulletTag], function (objPos, bulletTag) {
+                    objPos.position = playerPosition_1.add(game.BulletSystem.bulletOffset);
+                });
+                game.BulletSystem.isAwake = true;
+            }
             //bullet hits something
             this.world.forEach([ut.Entity, game.BulletTag, ut.HitBox2D.HitBoxOverlapResults], function (bullet, move, bulletTag, results) {
                 _this.world.destroyEntity(bullet);
             });
         };
         BulletSystem.bulletOffset = new Vector3(5, 0, 0);
+        BulletSystem.isAwake = false;
         return BulletSystem;
     }(ut.ComponentSystem));
     game.BulletSystem = BulletSystem;
@@ -63,14 +57,15 @@ var game;
         function EnemySystem() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        EnemySystem.prototype.OnEnable = function () {
-            this.world.forEach([ut.Core2D.TransformLocalPosition, game.Boundaries], function (position, bounds) {
-                var randomY = bounds.minY + Math.random() * (bounds.maxY - bounds.minY);
-                position.position = new Vector3(0, randomY, 0);
-            });
-        };
         EnemySystem.prototype.OnUpdate = function () {
+            if (!game.EnemySystem.isAwake) {
+                this.world.forEach([ut.Core2D.TransformLocalPosition, game.Boundaries], function (position, bounds) {
+                    var randomY = bounds.minY + Math.random() * (bounds.maxY - bounds.minY);
+                    position.position = new Vector3(0, randomY, 0);
+                });
+            }
         };
+        EnemySystem.isAwake = false;
         return EnemySystem;
     }(ut.ComponentSystem));
     game.EnemySystem = EnemySystem;
@@ -207,25 +202,6 @@ var game;
 })(game || (game = {}));
 var game;
 (function (game) {
-    var NewBehaviourFilter = /** @class */ (function (_super) {
-        __extends(NewBehaviourFilter, _super);
-        function NewBehaviourFilter() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return NewBehaviourFilter;
-    }(ut.EntityFilter));
-    game.NewBehaviourFilter = NewBehaviourFilter;
-    var NewBehaviour = /** @class */ (function (_super) {
-        __extends(NewBehaviour, _super);
-        function NewBehaviour() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return NewBehaviour;
-    }(ut.ComponentBehaviour));
-    game.NewBehaviour = NewBehaviour;
-})(game || (game = {}));
-var game;
-(function (game) {
     /** New System */
     var OffScreenDestroySystem = /** @class */ (function (_super) {
         __extends(OffScreenDestroySystem, _super);
@@ -349,6 +325,54 @@ var ut;
     }(ut.ComponentSystem));
     ut.Time = Time;
 })(ut || (ut = {}));
+// namespace game {
+//     export class BulletBehaviourFilter extends ut.EntityFilter {
+//         bulletPos: ut.Core2D.TransformLocalPosition;
+//         tag: game.BulletTag;
+//     }
+//     export class BulletBehaviour extends ut.ComponentBehaviour {
+//         data: BulletBehaviourFilter;
+//         static bulletOffset: Vector3 = new Vector3(5,0,0);
+//         // ComponentBehaviour lifecycle events
+//         // uncomment any method you need
+//         // this method is called for each entity matching the BulletBehaviourFilter signature, once when enabled
+//         OnEntityEnable():void { 
+//             let playerPosition;
+//             this.world.forEach([ut.Core2D.TransformLocalPosition, PlayerTag], (objPos) => {
+//                 playerPosition = objPos.position;
+//             });
+//             this.data.bulletPos.position = playerPosition.add(game.BulletBehaviour.bulletOffset);
+//         }
+//         // this method is called for each entity matching the BulletBehaviourFilter signature, every frame it's enabled
+//         OnEntityUpdate():void { 
+//             this.world.forEach([ut.Entity, game.BulletTag, ut.HitBox2D.HitBoxOverlapResults], (bullet, move, bulletTag, results) => {
+//                 this.world.destroyEntity(bullet);
+//             });
+//         }
+//         // this method is called for each entity matching the BulletBehaviourFilter signature, once when disabled
+//         //OnEntityDisable():void { }
+//     }
+// }
+// namespace game {
+//     export class EnemyBehaviourFilter extends ut.EntityFilter {
+//         enemyPosition: ut.Core2D.TransformLocalPosition;
+//         bounds: game.Boundaries;
+//     }
+//     export class EnemyBehaviour extends ut.ComponentBehaviour {
+//         data: EnemyBehaviourFilter;
+//         // ComponentBehaviour lifecycle events
+//         // uncomment any method you need
+//         // this method is called for each entity matching the EnemyBehaviourFilter signature, once when enabled
+//         OnEntityEnable():void { 
+//             let randomY = this.data.bounds.minY + Math.random()*(this.data.bounds.maxY-this.data.bounds.minY);
+//             this.data.enemyPosition.position = new Vector3(0, randomY, 0);
+//         }
+//         // this method is called for each entity matching the EnemyBehaviourFilter signature, every frame it's enabled
+//         //OnEntityUpdate():void { }
+//         // this method is called for each entity matching the EnemyBehaviourFilter signature, once when disabled
+//         //OnEntityDisable():void { }
+//     }
+// }
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

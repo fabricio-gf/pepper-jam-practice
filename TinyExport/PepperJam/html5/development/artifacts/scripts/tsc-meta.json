@@ -76,133 +76,37 @@
             ]
         }
     ],
-    "Filters": [
-        {
-            "Name": "NewBehaviourFilter",
-            "QualifiedName": "game.NewBehaviourFilter",
-            "Description": "",
-            "Source": {
-                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                "Line": 4,
-                "Character": 17
-            },
-            "Fields": [
-                {
-                    "Name": "node",
-                    "QualifiedName": "ut.Core2D.TransformNode",
-                    "Description": "",
-                    "Source": {
-                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                        "Line": 4,
-                        "Character": 62
-                    },
-                    "IsStatic": false,
-                    "IsReadonly": false,
-                    "IsOptional": false,
-                    "IsPublic": true
-                },
-                {
-                    "Name": "position",
-                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
-                    "Description": "",
-                    "Source": {
-                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                        "Line": 5,
-                        "Character": 39
-                    },
-                    "IsStatic": false,
-                    "IsReadonly": false,
-                    "IsOptional": true,
-                    "IsPublic": true
-                },
-                {
-                    "Name": "rotation",
-                    "QualifiedName": "ut.Core2D.TransformLocalRotation",
-                    "Description": "",
-                    "Source": {
-                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                        "Line": 6,
-                        "Character": 53
-                    },
-                    "IsStatic": false,
-                    "IsReadonly": false,
-                    "IsOptional": true,
-                    "IsPublic": true
-                },
-                {
-                    "Name": "scale",
-                    "QualifiedName": "ut.Core2D.TransformLocalScale",
-                    "Description": "",
-                    "Source": {
-                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                        "Line": 7,
-                        "Character": 53
-                    },
-                    "IsStatic": false,
-                    "IsReadonly": false,
-                    "IsOptional": true,
-                    "IsPublic": true
-                }
-            ]
-        }
-    ],
-    "Behaviours": [
-        {
-            "Name": "NewBehaviour",
-            "QualifiedName": "game.NewBehaviour",
-            "Description": "",
-            "Source": {
-                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                "Line": 11,
-                "Character": 17
-            },
-            "Fields": [
-                {
-                    "Name": "data",
-                    "QualifiedName": "game.NewBehaviourFilter",
-                    "Description": "",
-                    "Source": {
-                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
-                        "Line": 11,
-                        "Character": 62
-                    },
-                    "IsStatic": false,
-                    "IsReadonly": false,
-                    "IsOptional": false,
-                    "IsPublic": true
-                }
-            ]
-        }
-    ],
+    "Filters": [],
+    "Behaviours": [],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 104,
+            "Duration": 103,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 147,
+            "Duration": 133,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 674,
-            "Steps": 19
+            "Duration": 760,
+            "Steps": 20
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 62,
+            "Duration": 66,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 6,
+            "Duration": 4,
             "Steps": 7
         }
     ],
@@ -212,14 +116,15 @@
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/GameService.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
-        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/OffScreenDestroySystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/ScrollingBackgroundSystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/Time.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/Behaviours/BulletBehaviour.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/Behaviours/EnemyBehaviour.ts",
         "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "2415646b0ba58763bd31a4ec2092eb73",
-    "GeneratedAt": "Fri Jun 21 2019 14:23:15 GMT-0300 (Hora oficial do Brasil)"
+    "InputHash": "b73c7ff965a5b65a08a27fcfcbc69e7b",
+    "GeneratedAt": "Fri Jun 21 2019 14:52:49 GMT-0300 (Hora oficial do Brasil)"
 }
