@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class EffectsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static EffectsManager instance;
+
+    public AudioClip[] clips;
+
+    public AudioSource source;
+
+    void Awake()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayClip(int index)
     {
-        
+        source.PlayOneShot(clips[index]);
     }
 }

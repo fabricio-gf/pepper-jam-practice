@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static EndGame instance;
+    public GameObject EndScreen;
+
+    void Awake()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Defeat()
     {
-        
+        EndScreen.SetActive(true);
     }
 }

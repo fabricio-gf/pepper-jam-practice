@@ -27,6 +27,7 @@ public class ShootBehaviour : MonoBehaviour
 
         if(CurrentTime <= 0)
         {
+            EffectsManager.instance.PlayClip(2);
             GameObject obj = Instantiate(ProjectilePrefab, transform.position + new Vector3(ProjectileOffset, 0, 0), Quaternion.identity, ProjectileParent);
             obj.GetComponent<ProjectileBehaviour>().Damage = Damage;
             CurrentTime += FireRate;

@@ -18,6 +18,8 @@ public class EnemySpawner : MonoBehaviour
 
     float currentTime;
 
+    int randomIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,16 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         currentTime -= Time.deltaTime;
+        
 
-        if(currentTime <= 0)
+        if (currentTime <= 0)
         {
-            Instantiate(Enemies[Random.Range(0,Enemies.Length)], PositionZero - new Vector2(0, PositionOffset*Random.Range(0,5)), Quaternion.identity, EnemiesParent);
+            randomIndex = Random.Range(0, Enemies.Length);
+            if (randomIndex != 2)
+            {
+                EffectsManager.instance.PlayClip(3);
+            }
+            Instantiate(Enemies[randomIndex], PositionZero - new Vector2(0, PositionOffset*Random.Range(0,5)), Quaternion.identity, EnemiesParent);
             currentTime += SpawnRate;
         }
     }

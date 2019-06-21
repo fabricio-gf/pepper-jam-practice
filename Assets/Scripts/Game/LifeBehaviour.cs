@@ -15,6 +15,7 @@ public class LifeBehaviour : MonoBehaviour
         if (Health <= 0)
         {
             //spawn explosion
+            EffectsManager.instance.PlayClip(1);
             Destroy(gameObject);
         }
     }

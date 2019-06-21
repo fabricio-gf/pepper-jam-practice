@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        EffectsManager.instance.PlayClip(0);
         SceneManager.LoadScene(sceneName);
     }
 }
