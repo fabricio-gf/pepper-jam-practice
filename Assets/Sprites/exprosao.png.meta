@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: fa4bdccd56240574aa8632fc91004762
+guid: 1955ebb92c8601945a85fb4728e22a5a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: carro_0
-    21300002: carro_1
-    21300004: carro_2
-    21300006: carro_3
-    21300008: carro_4
-    21300010: carro_5
+    21300000: exprosao_0
+    21300002: exprosao_1
+    21300004: exprosao_2
+    21300006: exprosao_3
+    21300008: exprosao_4
+    21300010: exprosao_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,121 +112,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carro_0
+      name: exprosao_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 300
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 100
+        width: 213.33333
+        height: 100
+      alignment: 9
+      pivot: {x: 0.8411474, y: 0.19030601}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59283ad5c182450498f269ceb2e394fd
+      spriteID: af6be65001d76964b9102b9ddab8ce48
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carro_1
+      name: exprosao_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 199
-        width: 300
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 213
+        y: 100
+        width: 213.33333
+        height: 100
+      alignment: 9
+      pivot: {x: 0.7685628, y: 0.2367601}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb56ccf674e3aa441abfeac0a6b7ed7a
+      spriteID: d2d66347df80e204bbc5a852a258b842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carro_2
+      name: exprosao_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 200
-        width: 300
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 426
+        y: 100
+        width: 213.33333
+        height: 100
+      alignment: 9
+      pivot: {x: 0.8943761, y: 0.2367601}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 240d9910ef23e3749aea40e7f444bbd1
+      spriteID: 2b397f88e20d3c04b853cf10aae42333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carro_3
+      name: exprosao_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 213.33333
+        height: 100
+      alignment: 9
+      pivot: {x: 0.78307974, y: 0.34515297}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6d18a170f03cfc4fbc75e85f90f06b3
+      spriteID: fbf8edb2eb643ea40b7404565df1bb5b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carro_4
+      name: exprosao_4
       rect:
         serializedVersion: 2
-        x: 300
+        x: 213
         y: 0
-        width: 300
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 213.33333
+        height: 100
+      alignment: 9
+      pivot: {x: 0.7613044, y: 0.47935376}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 171c83a59d15d92479569ac0cb78a70d
+      spriteID: 53d0c29e830431347bda897c4d05ded0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carro_5
+      name: exprosao_5
       rect:
         serializedVersion: 2
-        x: 600
+        x: 426
         y: 0
-        width: 300
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 213.33333
+        height: 100
+      alignment: 9
+      pivot: {x: 0.88469815, y: 0.44322276}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23aa80650aebff14ab1b1612fd1fa0f1
+      spriteID: 09afd419ce53e7a41b9df6f621f1e99d
       vertices: []
       indices: 
       edges: []
@@ -234,7 +234,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 926fd408824c3f44c81829e5f2b4a0e9
+    spriteID: 811e180e1e3148d4a9b4e71050f40a9a
     vertices: []
     indices: 
     edges: []

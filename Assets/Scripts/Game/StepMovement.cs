@@ -34,6 +34,7 @@ public class StepMovement : MonoBehaviour{
             } else {
                 andando = false;
                 rigid.velocity = Vector3.zero;
+                transform.position = Destination;
             }
         } else {
             if (Dir!= Vector3.zero) {
