@@ -1,0 +1,26 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "16c7ef0d4eed47d7beca794fd10fff42",
+    "Name": "ForwardVector",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "fbcab4e9ecb44bd0a97a5d8f03b4b8a6",
+        "Name": "forward",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "16c7ef0d4eed47d7beca794fd10fff42", "Name": "ForwardVector" },
+        "Properties": {
+            "forward": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" }
+            }
+        }
+    }
+}]

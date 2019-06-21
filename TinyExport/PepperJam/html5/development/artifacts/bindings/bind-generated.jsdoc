@@ -1,8 +1,74 @@
 /**
 
 @component
+@memberof entities.game.Background
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.BulletGroup
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.MainGroup
 @name Component
+*/
+/**
+
+@component
+@memberof game
+@name Boundaries
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name minX
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name maxX
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name minY
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name maxY
+*/
+/**
+
+@component
+@memberof game
+@name BulletTag
+*/
+/**
+
+@component
+@memberof game
+@name DestroyOffScreenTag
+*/
+/**
+
+@component
+@memberof game
+@name ForwardVector
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.ForwardVector
+@name forward
 */
 /**
 
@@ -44,31 +110,37 @@
 
 @component
 @memberof game
-@name Boundaries
+@name Shoot
 */
 /**
 
 @member {float}
-@memberof game.Boundaries
-@name minX
+@memberof game.Shoot
+@name time
 */
 /**
 
 @member {float}
-@memberof game.Boundaries
-@name maxX
+@memberof game.Shoot
+@name delay
 */
 /**
 
-@member {float}
-@memberof game.Boundaries
-@name minY
+@member {string}
+@memberof game.Shoot
+@name bulletGroup
 */
 /**
 
-@member {float}
-@memberof game.Boundaries
-@name maxY
+@member {bool}
+@memberof game.Shoot
+@name isPaused
+*/
+/**
+
+@component
+@memberof game
+@name WallTag
 */
 /**
 
@@ -308,7 +380,31 @@
 
 @system
 @memberof game
+@name BulletSystemJS
+*/
+/**
+
+@system
+@memberof game
 @name InputMoveSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name InputShootSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name OffScreenDestroySystemJS
+*/
+/**
+
+@system
+@memberof ut
+@name TimeJS
 */
 
 

@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 1970,
+                "Size": 8759,
                 "CompressedSize": 0
             }
         }, {
@@ -51,6 +51,27 @@
                     "Object": { "$TypeId": 10, "Guid": "2e1255b50d7d4495192345a56a9fca52", "FileId": 2800000, "Type": 3 }
                 }
             }]
+        }, {
+            "Item": {
+                "Name": "sactx-128x64-DXT5-Cells-a666c793",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/PepperJam/html5/development/artifacts/assets/sactx-128x64-DXT5-Cells-a666c793.jpg",
+                    "Size": 2412,
+                    "CompressedSize": 1728,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/PepperJam/html5/development/artifacts/assets/sactx-128x64-DXT5-Cells-a666c793_a.png",
+                    "Size": 724,
+                    "CompressedSize": 513,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
         }]
     }, {
         "Item": {
@@ -61,21 +82,33 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/entities.js",
-                "Size": 2911,
-                "CompressedSize": 958
+                "Size": 6669,
+                "CompressedSize": 1451
             },
             "Children": [{
                 "Item": {
+                    "Name": "Background",
+                    "Size": 1412,
+                    "CompressedSize": 527
+                }
+            }, {
+                "Item": {
+                    "Name": "BulletGroup",
+                    "Size": 2202,
+                    "CompressedSize": 718
+                }
+            }, {
+                "Item": {
                     "Name": "MainGroup",
-                    "Size": 2830,
-                    "CompressedSize": 881
+                    "Size": 2978,
+                    "CompressedSize": 925
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/bindings.js",
-                "Size": 87765,
-                "CompressedSize": 7184
+                "Size": 108642,
+                "CompressedSize": 9033
             }
         }, {
             "Item": {
@@ -86,15 +119,15 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/PepperJam/html5/development/artifacts/scripts/tsc-emit.js",
-                    "Size": 7979,
-                    "CompressedSize": 1886
+                    "Size": 15051,
+                    "CompressedSize": 3151
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/main.js",
-                "Size": 2203,
-                "CompressedSize": 773
+                "Size": 2783,
+                "CompressedSize": 859
             }
         }, {
             "Item": {

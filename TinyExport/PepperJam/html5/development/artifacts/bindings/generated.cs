@@ -6,12 +6,25 @@ using ut;
 using UTiny.HTML;
 using UTiny.Rendering;
 using ut.EditorExtensions;
+using UTiny.HitBox2D;
 
 /*
  * !!! TEMP UNITL PROPER SCENE FORMAT !!!
  */
 namespace entities.game
 {
+    namespace Background
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
+    namespace BulletGroup
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
     namespace MainGroup
     {
         public struct Component : IComponentData
@@ -22,6 +35,23 @@ namespace entities.game
 
 namespace game
 {
+    public struct Boundaries : IComponentData
+    {
+        public float minX;
+        public float maxX;
+        public float minY;
+        public float maxY;
+    }
+    public struct BulletTag : IComponentData
+    {
+    }
+    public struct DestroyOffScreenTag : IComponentData
+    {
+    }
+    public struct ForwardVector : IComponentData
+    {
+        public Vector3 forward;
+    }
     public struct Move : IComponentData
     {
         public float speed;
@@ -34,12 +64,15 @@ namespace game
     public struct PlayerTag : IComponentData
     {
     }
-    public struct Boundaries : IComponentData
+    public struct Shoot : IComponentData
     {
-        public float minX;
-        public float maxX;
-        public float minY;
-        public float maxY;
+        public float time;
+        public float delay;
+        public string bulletGroup;
+        public bool isPaused;
+    }
+    public struct WallTag : IComponentData
+    {
     }
 }
 
@@ -176,9 +209,38 @@ namespace ut.EditorExtensions
         public int layer;
     }
 }
+
+namespace ut.HitBox2D
+{
+}
+namespace game
+{
+    public class BulletSystemJS : IComponentSystem
+    {
+    }
+}
 namespace game
 {
     public class InputMoveSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    public class InputShootSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    public class OffScreenDestroySystemJS : IComponentSystem
+    {
+    }
+}
+namespace ut
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeStart))]
+    public class TimeJS : IComponentSystem
     {
     }
 }

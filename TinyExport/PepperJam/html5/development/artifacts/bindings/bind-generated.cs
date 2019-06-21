@@ -1,4 +1,28 @@
 using Unity.Collections.LowLevel.Unsafe;
+namespace entities.game.Background
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace entities.game.BulletGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
 namespace entities.game.MainGroup
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -6,6 +30,59 @@ namespace entities.game.MainGroup
     {
 
 
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Boundaries : UTiny.IComponentData
+    {
+
+
+        public float minX;
+        public float maxX;
+        public float minY;
+        public float maxY;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct BulletTag : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct DestroyOffScreenTag : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct ForwardVector : UTiny.IComponentData
+    {
+
+
+        public Unity.Mathematics.float3 forward;
 
 
 
@@ -53,14 +130,26 @@ namespace game
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public struct Boundaries : UTiny.IComponentData
+    public struct Shoot : UTiny.IComponentData
     {
 
 
-        public float minX;
-        public float maxX;
-        public float minY;
-        public float maxY;
+        public float time;
+        public float delay;
+        public string bulletGroup;
+        public bool isPaused;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct WallTag : UTiny.IComponentData
+    {
+
+
 
 
 

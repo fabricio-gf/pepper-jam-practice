@@ -1,3 +1,35 @@
+declare namespace entities.game.Background {
+
+class Component extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Component): Component;
+  static _toPtr(p: number, v: Component): void;
+  static _tempHeapPtr(v: Component): number;
+  static _dtorFn(v: Component): void;
+}
+
+}
+declare namespace entities.game.BulletGroup {
+
+class Component extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Component): Component;
+  static _toPtr(p: number, v: Component): void;
+  static _tempHeapPtr(v: Component): number;
+  static _dtorFn(v: Component): void;
+}
+
+}
 declare namespace entities.game.MainGroup {
 
 class Component extends ut.Component {
@@ -11,6 +43,80 @@ class Component extends ut.Component {
   static _toPtr(p: number, v: Component): void;
   static _tempHeapPtr(v: Component): number;
   static _dtorFn(v: Component): void;
+}
+
+}
+declare namespace game {
+
+class Boundaries extends ut.Component {
+  constructor(minX?: number, maxX?: number, minY?: number, maxY?: number);
+  minX: number;
+  maxX: number;
+  minY: number;
+  maxY: number;
+  static readonly minX: ComponentFieldDesc;
+  static readonly maxX: ComponentFieldDesc;
+  static readonly minY: ComponentFieldDesc;
+  static readonly maxY: ComponentFieldDesc;
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Boundaries): Boundaries;
+  static _toPtr(p: number, v: Boundaries): void;
+  static _tempHeapPtr(v: Boundaries): number;
+  static _dtorFn(v: Boundaries): void;
+}
+
+}
+declare namespace game {
+
+class BulletTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: BulletTag): BulletTag;
+  static _toPtr(p: number, v: BulletTag): void;
+  static _tempHeapPtr(v: BulletTag): number;
+  static _dtorFn(v: BulletTag): void;
+}
+
+}
+declare namespace game {
+
+class DestroyOffScreenTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: DestroyOffScreenTag): DestroyOffScreenTag;
+  static _toPtr(p: number, v: DestroyOffScreenTag): void;
+  static _tempHeapPtr(v: DestroyOffScreenTag): number;
+  static _dtorFn(v: DestroyOffScreenTag): void;
+}
+
+}
+declare namespace game {
+
+class ForwardVector extends ut.Component {
+  constructor(forward?: Vector3);
+  forward: Vector3;
+  static readonly forward: Vector3ComponentFieldDesc;
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: ForwardVector): ForwardVector;
+  static _toPtr(p: number, v: ForwardVector): void;
+  static _tempHeapPtr(v: ForwardVector): number;
+  static _dtorFn(v: ForwardVector): void;
 }
 
 }
@@ -70,25 +176,41 @@ class PlayerTag extends ut.Component {
 }
 declare namespace game {
 
-class Boundaries extends ut.Component {
-  constructor(minX?: number, maxX?: number, minY?: number, maxY?: number);
-  minX: number;
-  maxX: number;
-  minY: number;
-  maxY: number;
-  static readonly minX: ComponentFieldDesc;
-  static readonly maxX: ComponentFieldDesc;
-  static readonly minY: ComponentFieldDesc;
-  static readonly maxY: ComponentFieldDesc;
+class Shoot extends ut.Component {
+  constructor(time?: number, delay?: number, bulletGroup?: string, isPaused?: boolean);
+  time: number;
+  delay: number;
+  bulletGroup: string;
+  isPaused: boolean;
+  static readonly time: ComponentFieldDesc;
+  static readonly delay: ComponentFieldDesc;
+  
+  static readonly isPaused: ComponentFieldDesc;
   static readonly cid: number;
   static readonly _view: any;
   static readonly _isSharedComp: boolean;
 
   static _size: number;
-  static _fromPtr(p: number, v?: Boundaries): Boundaries;
-  static _toPtr(p: number, v: Boundaries): void;
-  static _tempHeapPtr(v: Boundaries): number;
-  static _dtorFn(v: Boundaries): void;
+  static _fromPtr(p: number, v?: Shoot): Shoot;
+  static _toPtr(p: number, v: Shoot): void;
+  static _tempHeapPtr(v: Shoot): number;
+  static _dtorFn(v: Shoot): void;
+}
+
+}
+declare namespace game {
+
+class WallTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: WallTag): WallTag;
+  static _toPtr(p: number, v: WallTag): void;
+  static _tempHeapPtr(v: WallTag): number;
+  static _dtorFn(v: WallTag): void;
 }
 
 }
@@ -395,7 +517,19 @@ class EntityLayer extends ut.Component {
 
 }
 declare namespace game {
+var BulletSystemJS: ut.SystemJS;
+}
+declare namespace game {
 var InputMoveSystemJS: ut.SystemJS;
+}
+declare namespace game {
+var InputShootSystemJS: ut.SystemJS;
+}
+declare namespace game {
+var OffScreenDestroySystemJS: ut.SystemJS;
+}
+declare namespace ut {
+var TimeJS: ut.SystemJS;
 }
 
 

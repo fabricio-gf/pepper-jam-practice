@@ -110,5 +110,12 @@
         "Type": { "Id": "d0d5bb6569504b538d00060039e18658", "Name": "MoveWithInput" }
     }, {
         "Type": { "Id": "c2e345f33353433ba2095208b3a8aeb7", "Name": "PlayerTag" }
+    }, {
+        "Type": { "Id": "0a44959ee0e24f0aba3a2e9eeca0a367", "Name": "Shoot" },
+        "Properties": {
+            "delay": 1.5,
+            "bulletGroup": "game.BulletGroup",
+            "isPaused": false
+        }
     }]
 }]

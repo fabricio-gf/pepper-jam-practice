@@ -78,6 +78,55 @@ declare namespace ut {
 }
 declare var UT_ASSETS: Object;
 declare namespace game{
+    class Boundaries extends ut.Component {
+        constructor();
+        minX: number;
+        maxX: number;
+        minY: number;
+        maxY: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Boundaries): Boundaries;
+        static _toPtr(p: number, v: Boundaries): void;
+        static _tempHeapPtr(v: Boundaries): number;
+        static _dtorFn(v: Boundaries): void;
+    }
+    class BulletTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: BulletTag): BulletTag;
+        static _toPtr(p: number, v: BulletTag): void;
+        static _tempHeapPtr(v: BulletTag): number;
+        static _dtorFn(v: BulletTag): void;
+    }
+    class DestroyOffScreenTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: DestroyOffScreenTag): DestroyOffScreenTag;
+        static _toPtr(p: number, v: DestroyOffScreenTag): void;
+        static _tempHeapPtr(v: DestroyOffScreenTag): number;
+        static _dtorFn(v: DestroyOffScreenTag): void;
+    }
+    class ForwardVector extends ut.Component {
+        constructor();
+        forward: ut.Math.Vector3;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: ForwardVector): ForwardVector;
+        static _toPtr(p: number, v: ForwardVector): void;
+        static _tempHeapPtr(v: ForwardVector): number;
+        static _dtorFn(v: ForwardVector): void;
+    }
     class Move extends ut.Component {
         constructor();
         speed: number;
@@ -114,24 +163,12 @@ declare namespace game{
         static _tempHeapPtr(v: PlayerTag): number;
         static _dtorFn(v: PlayerTag): void;
     }
-    class Boundaries extends ut.Component {
-        constructor();
-        minX: number;
-        maxX: number;
-        minY: number;
-        maxY: number;
-        static readonly cid: number;
-        static readonly _view: any;
-        static readonly _isSharedComp: boolean;
-        static _size: number;
-        static _fromPtr(p: number, v?: Boundaries): Boundaries;
-        static _toPtr(p: number, v: Boundaries): void;
-        static _tempHeapPtr(v: Boundaries): number;
-        static _dtorFn(v: Boundaries): void;
-    }
     class Shoot extends ut.Component {
         constructor();
+        time: number;
+        delay: number;
         bulletGroup: string;
+        isPaused: boolean;
         static readonly cid: number;
         static readonly _view: any;
         static readonly _isSharedComp: boolean;
@@ -140,17 +177,6 @@ declare namespace game{
         static _toPtr(p: number, v: Shoot): void;
         static _tempHeapPtr(v: Shoot): number;
         static _dtorFn(v: Shoot): void;
-    }
-    class BulletTag extends ut.Component {
-        constructor();
-        static readonly cid: number;
-        static readonly _view: any;
-        static readonly _isSharedComp: boolean;
-        static _size: number;
-        static _fromPtr(p: number, v?: BulletTag): BulletTag;
-        static _toPtr(p: number, v: BulletTag): void;
-        static _tempHeapPtr(v: BulletTag): number;
-        static _dtorFn(v: BulletTag): void;
     }
     class WallTag extends ut.Component {
         constructor();
@@ -300,9 +326,9 @@ declare namespace ut{
         [module: string]: any;
         game: {
             [data: string]: EntityGroupData;
-            MainGroup: EntityGroupData;
-            BulletGroup: EntityGroupData;
             Background: EntityGroupData;
+            BulletGroup: EntityGroupData;
+            MainGroup: EntityGroupData;
         }
     }
 }

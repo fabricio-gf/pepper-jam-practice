@@ -9,7 +9,7 @@ namespace game {
 
             let dt = this.scheduler.deltaTime();
 
-            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition], (entity, move, transformlocalposition) => {
+            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition, MoveWithInput], (entity, move, transformlocalposition, inputTag) => {
                 
                 let direction = new Vector3(0, 0, 0);
                 let position = transformlocalposition.position as Vector3;
