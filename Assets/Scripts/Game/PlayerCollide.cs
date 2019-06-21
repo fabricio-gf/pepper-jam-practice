@@ -14,7 +14,7 @@ public class PlayerCollide : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Projectile") || collision.CompareTag("Enemy"))
+        if(collision.CompareTag("Enemy") || collision.CompareTag("Barricade"))
         {
             LifeScript.TakeDamage(100);
             EndGame.instance.Defeat();

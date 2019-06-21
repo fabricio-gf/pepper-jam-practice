@@ -21,6 +21,7 @@ public class EndGame : MonoBehaviour
 
     public void Defeat()
     {
+        //Time.timeScale = 0;
         EndScreen.SetActive(true);
     }
 }

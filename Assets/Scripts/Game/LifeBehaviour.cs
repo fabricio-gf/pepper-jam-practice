@@ -5,6 +5,7 @@ using UnityEngine;
 public class LifeBehaviour : MonoBehaviour
 {
     public GameObject Explosion;
+    //public Transform ExplosionParent;
 
     public float Health;
 
@@ -14,7 +15,7 @@ public class LifeBehaviour : MonoBehaviour
 
         if (Health <= 0)
         {
-            //spawn explosion
+            Instantiate(Explosion, transform.position, Quaternion.identity);
             EffectsManager.instance.PlayClip(1);
             Destroy(gameObject);
         }
