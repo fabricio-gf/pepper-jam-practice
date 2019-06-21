@@ -1,0 +1,41 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "649e6633858d45a9b5b95eb1effa8e27",
+    "Name": "StepMove",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "ce20d0e0bb9947cc958ffa8b1abcbd46",
+        "Name": "direction",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "ca042b2b198e4ae39cbf7eeb72123e18",
+        "Name": "stepSize",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "a2eb57b51b364a7aa6325cc1cc9067e2",
+        "Name": "threshold",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "649e6633858d45a9b5b95eb1effa8e27", "Name": "StepMove" },
+        "Properties": {
+            "stepSize": 1,
+            "threshold": 1
+        }
+    }
+}]

@@ -99,16 +99,22 @@
             }
         }
     }, {
-        "Type": { "Id": "66d0889c37e84d51ade4592c45aaee35", "Name": "Move" },
+        "Type": { "Id": "18f2e1842bf2412f9d0e23516347e821", "Name": "Boundaries" },
         "Properties": {
-            "speed": 10,
-            "threshold": 50
+            "minX": 100,
+            "maxX": 100,
+            "minY": 100,
+            "maxY": 100
         }
-    }, {
-        "Type": { "Id": "18f2e1842bf2412f9d0e23516347e821", "Name": "Boundaries" }
     }, {
         "Type": { "Id": "d0d5bb6569504b538d00060039e18658", "Name": "MoveWithInput" }
     }, {
         "Type": { "Id": "c2e345f33353433ba2095208b3a8aeb7", "Name": "PlayerTag" }
+    }, {
+        "Type": { "Id": "649e6633858d45a9b5b95eb1effa8e27", "Name": "StepMove" },
+        "Properties": {
+            "stepSize": 600,
+            "threshold": 1000
+        }
     }]
 }]

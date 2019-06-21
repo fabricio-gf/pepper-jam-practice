@@ -5,6 +5,138 @@
 ut.meta.registerTypes();
 var entities = entities || {};
 entities.game = entities.game || {};
+entities.game.Background = entities.game.Background || {};
+entities.game.Background.Component = function() {
+};
+entities.game.Background.Component.prototype = Object.create(null);
+entities.game.Background.Component.prototype.constructor = entities.game.Background.Component;
+Object.defineProperties(entities.game.Background.Component.prototype, {
+});
+entities.game.Background.Component._size = 1;
+entities.game.Background.Component._fromPtr = function(ptr, v) {
+  v = v || Object.create(entities.game.Background.Component.prototype);
+  return v;
+};
+entities.game.Background.Component._toPtr = function(ptr, v) {
+};
+entities.game.Background.Component._toTempHeapPtr = function(ptr, v) {
+};
+entities.game.Background.Component._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) entities.game.Background.Component._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+entities.game.Background.Component.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+entities.game.Background.Component.StorageView.prototype = Object.create(null);
+entities.game.Background.Component.StorageView.prototype.constructor = entities.game.Background.Component.StorageView;
+entities.game.Background.Component._view = entities.game.Background.Component.StorageView;
+entities.game.Background.Component.StorageView._isSharedComp = entities.game.Background.Component._isSharedComp = false;
+entities.game.Background.Component.StorageView._fromPtr = entities.game.Background.Component._fromPtr;
+entities.game.Background.Component.StorageView._toPtr = entities.game.Background.Component._toPtr;
+entities.game.Background.Component.StorageView._tempHeapPtr = entities.game.Background.Component._tempHeapPtr;
+entities.game.Background.Component.StorageView._size = entities.game.Background.Component._size;
+entities.game.Background.Component.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(entities.game.Background.Component.StorageView.prototype, {
+});
+entities.game.Background.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// entities.game.Background.Component is a POD type, so a JavaScript side copy constructor entities.game.Background.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+entities.game.Background.Component._typeDesc = (function() {
+  return ut.meta.allocType(5, 'entities.game.Background.Component', 1, []);
+})();
+Object.defineProperties(entities.game.Background.Component, { cid: { configurable: true, get: function() { delete entities.game.Background.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.Background.Component.cid = Module._ut_component_register_cid_with_type(entities.game.Background.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.Background.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.Background.Component.cid; } } });
+entities.game.BulletGroup = entities.game.BulletGroup || {};
+entities.game.BulletGroup.Component = function() {
+};
+entities.game.BulletGroup.Component.prototype = Object.create(null);
+entities.game.BulletGroup.Component.prototype.constructor = entities.game.BulletGroup.Component;
+Object.defineProperties(entities.game.BulletGroup.Component.prototype, {
+});
+entities.game.BulletGroup.Component._size = 1;
+entities.game.BulletGroup.Component._fromPtr = function(ptr, v) {
+  v = v || Object.create(entities.game.BulletGroup.Component.prototype);
+  return v;
+};
+entities.game.BulletGroup.Component._toPtr = function(ptr, v) {
+};
+entities.game.BulletGroup.Component._toTempHeapPtr = function(ptr, v) {
+};
+entities.game.BulletGroup.Component._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) entities.game.BulletGroup.Component._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+entities.game.BulletGroup.Component.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+entities.game.BulletGroup.Component.StorageView.prototype = Object.create(null);
+entities.game.BulletGroup.Component.StorageView.prototype.constructor = entities.game.BulletGroup.Component.StorageView;
+entities.game.BulletGroup.Component._view = entities.game.BulletGroup.Component.StorageView;
+entities.game.BulletGroup.Component.StorageView._isSharedComp = entities.game.BulletGroup.Component._isSharedComp = false;
+entities.game.BulletGroup.Component.StorageView._fromPtr = entities.game.BulletGroup.Component._fromPtr;
+entities.game.BulletGroup.Component.StorageView._toPtr = entities.game.BulletGroup.Component._toPtr;
+entities.game.BulletGroup.Component.StorageView._tempHeapPtr = entities.game.BulletGroup.Component._tempHeapPtr;
+entities.game.BulletGroup.Component.StorageView._size = entities.game.BulletGroup.Component._size;
+entities.game.BulletGroup.Component.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(entities.game.BulletGroup.Component.StorageView.prototype, {
+});
+entities.game.BulletGroup.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// entities.game.BulletGroup.Component is a POD type, so a JavaScript side copy constructor entities.game.BulletGroup.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+entities.game.BulletGroup.Component._typeDesc = (function() {
+  return ut.meta.allocType(5, 'entities.game.BulletGroup.Component', 1, []);
+})();
+Object.defineProperties(entities.game.BulletGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.BulletGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.BulletGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.BulletGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.BulletGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.BulletGroup.Component.cid; } } });
+entities.game.EnemyGroup = entities.game.EnemyGroup || {};
+entities.game.EnemyGroup.Component = function() {
+};
+entities.game.EnemyGroup.Component.prototype = Object.create(null);
+entities.game.EnemyGroup.Component.prototype.constructor = entities.game.EnemyGroup.Component;
+Object.defineProperties(entities.game.EnemyGroup.Component.prototype, {
+});
+entities.game.EnemyGroup.Component._size = 1;
+entities.game.EnemyGroup.Component._fromPtr = function(ptr, v) {
+  v = v || Object.create(entities.game.EnemyGroup.Component.prototype);
+  return v;
+};
+entities.game.EnemyGroup.Component._toPtr = function(ptr, v) {
+};
+entities.game.EnemyGroup.Component._toTempHeapPtr = function(ptr, v) {
+};
+entities.game.EnemyGroup.Component._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) entities.game.EnemyGroup.Component._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+entities.game.EnemyGroup.Component.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+entities.game.EnemyGroup.Component.StorageView.prototype = Object.create(null);
+entities.game.EnemyGroup.Component.StorageView.prototype.constructor = entities.game.EnemyGroup.Component.StorageView;
+entities.game.EnemyGroup.Component._view = entities.game.EnemyGroup.Component.StorageView;
+entities.game.EnemyGroup.Component.StorageView._isSharedComp = entities.game.EnemyGroup.Component._isSharedComp = false;
+entities.game.EnemyGroup.Component.StorageView._fromPtr = entities.game.EnemyGroup.Component._fromPtr;
+entities.game.EnemyGroup.Component.StorageView._toPtr = entities.game.EnemyGroup.Component._toPtr;
+entities.game.EnemyGroup.Component.StorageView._tempHeapPtr = entities.game.EnemyGroup.Component._tempHeapPtr;
+entities.game.EnemyGroup.Component.StorageView._size = entities.game.EnemyGroup.Component._size;
+entities.game.EnemyGroup.Component.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(entities.game.EnemyGroup.Component.StorageView.prototype, {
+});
+entities.game.EnemyGroup.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// entities.game.EnemyGroup.Component is a POD type, so a JavaScript side copy constructor entities.game.EnemyGroup.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+entities.game.EnemyGroup.Component._typeDesc = (function() {
+  return ut.meta.allocType(5, 'entities.game.EnemyGroup.Component', 1, []);
+})();
+Object.defineProperties(entities.game.EnemyGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.EnemyGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.EnemyGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.EnemyGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.EnemyGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.EnemyGroup.Component.cid; } } });
 entities.game.MainGroup = entities.game.MainGroup || {};
 entities.game.MainGroup.Component = function() {
 };
@@ -50,180 +182,6 @@ entities.game.MainGroup.Component._typeDesc = (function() {
 Object.defineProperties(entities.game.MainGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.MainGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.MainGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.MainGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(entities.game.MainGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.MainGroup.Component.cid; } } });
 var game = game || {};
-game.Move = function(arg0, arg1, arg2) {
-  this._speed = (+(arg0===undefined ? 0 : arg0));
-  this._threshold = (+(arg1===undefined ? 0 : arg1));
-  this._touchSwipe = new ut.Math.Vector2(); if ((arg2) !== undefined) { this._touchSwipe.copy(arg2); };
-};
-game.Move.prototype = Object.create(null);
-game.Move.prototype.constructor = game.Move;
-Object.defineProperties(game.Move.prototype, {
-  speed: {
-    get: function() { return this._speed; },
-    set: function(v) { this._speed = (+(v===undefined ? 0 : v)); },
-  },
-  threshold: {
-    get: function() { return this._threshold; },
-    set: function(v) { this._threshold = (+(v===undefined ? 0 : v)); },
-  },
-  touchSwipe: {
-    get: function() { return this._touchSwipe; },
-    set: function(v) { this._touchSwipe.copy(v); },
-  },
-});
-game.Move._size = 16;
-game.Move._fromPtr = function(ptr, v) {
-  v = v || Object.create(game.Move.prototype);
-  v._speed = HEAPF32[(ptr+0)>>2];
-  v._threshold = HEAPF32[(ptr+4)>>2];
-  v._touchSwipe = ut._utils.vec2FromHeap(null, ptr+8);
-  return v;
-};
-game.Move._toPtr = function(ptr, v) {
-  HEAPF32[(ptr+0)>>2] = v.speed;
-  HEAPF32[(ptr+4)>>2] = v.threshold;
-  ut._utils.vec2ToHeap(v.touchSwipe, ptr+8);
-};
-game.Move._toTempHeapPtr = function(ptr, v) {
-  HEAPF32[(ptr+0)>>2] = v.speed;
-  HEAPF32[(ptr+4)>>2] = v.threshold;
-  ut._utils.vec2ToHeap(v.touchSwipe, ptr+8);
-};
-game.Move._tempHeapPtr = function(v) {
-  var ptr = ut.tempHeapPtrBufferZero(16);
-  if (v) game.Move._toTempHeapPtr(ptr, v);
-  return ptr;
-};
-game.Move.StorageView = function(ptr) {
-  this._ptr = ptr;
-};
-game.Move.StorageView.prototype = Object.create(null);
-game.Move.StorageView.prototype.constructor = game.Move.StorageView;
-game.Move._view = game.Move.StorageView;
-game.Move.StorageView._isSharedComp = game.Move._isSharedComp = false;
-game.Move.StorageView._fromPtr = game.Move._fromPtr;
-game.Move.StorageView._toPtr = game.Move._toPtr;
-game.Move.StorageView._tempHeapPtr = game.Move._tempHeapPtr;
-game.Move.StorageView._size = game.Move._size;
-game.Move.StorageView.prototype.$advance = function() {
-  this._ptr += 16;
-};
-Object.defineProperties(game.Move.StorageView.prototype, {
-  speed: {
-    get: function() { return HEAPF32[(this._ptr+0)>>2]; },
-    set: function(v) { HEAPF32[(this._ptr+0)>>2] = v; },
-  },
-  threshold: {
-    get: function() { return HEAPF32[(this._ptr+4)>>2]; },
-    set: function(v) { HEAPF32[(this._ptr+4)>>2] = v; },
-  },
-  touchSwipe: {
-    get: function() { return ut._utils.vec2FromHeap(null, this._ptr+8); },
-    set: function(v) { if (typeof(v) !== 'object') { throw new Error('expected an object'); } ut._utils.vec2ToHeap(v, this._ptr+8); },
-  },
-});
-game.Move._dtorFn = function dtor(ptr) { /* POD, no-op */ }
-// game.Move is a POD type, so a JavaScript side copy constructor game.Move._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-game.Move._typeDesc = (function() {
-  return ut.meta.allocType(5, 'game.Move', 16, [
-    {name: 'speed', offset: 0, type: ut.meta.getType('float')},
-    {name: 'threshold', offset: 4, type: ut.meta.getType('float')},
-    {name: 'touchSwipe', offset: 8, type: ut.meta.getType('ut.Math.Vector2')}
-  ]);
-})();
-Object.defineProperties(game.Move, { cid: { configurable: true, get: function() { delete game.Move.cid; var offsetsPtr = 0, offsetsCount = 0; return game.Move.cid = Module._ut_component_register_cid_with_type(game.Move._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
-Object.defineProperties(game.Move.StorageView, { cid: { configurable: true, get: function() { return game.Move.cid; } } });
-game.Move.speed = { $ofs:0, $t:"float", $c:game.Move };
-game.Move.threshold = { $ofs:4, $t:"float", $c:game.Move };
-game.Move.touchSwipe = { $ofs:8, $t:"ut.Math.Vector2", $c:game.Move };
-game.Move.touchSwipe.y = { $ofs:12, $t:"float", $c:game.Move };
-game.Move.touchSwipe.x = { $ofs:8, $t:"float", $c:game.Move };
-game.MoveWithInput = function() {
-};
-game.MoveWithInput.prototype = Object.create(null);
-game.MoveWithInput.prototype.constructor = game.MoveWithInput;
-Object.defineProperties(game.MoveWithInput.prototype, {
-});
-game.MoveWithInput._size = 1;
-game.MoveWithInput._fromPtr = function(ptr, v) {
-  v = v || Object.create(game.MoveWithInput.prototype);
-  return v;
-};
-game.MoveWithInput._toPtr = function(ptr, v) {
-};
-game.MoveWithInput._toTempHeapPtr = function(ptr, v) {
-};
-game.MoveWithInput._tempHeapPtr = function(v) {
-  var ptr = ut.tempHeapPtrBufferZero(1);
-  if (v) game.MoveWithInput._toTempHeapPtr(ptr, v);
-  return ptr;
-};
-game.MoveWithInput.StorageView = function(ptr) {
-  this._ptr = ptr;
-};
-game.MoveWithInput.StorageView.prototype = Object.create(null);
-game.MoveWithInput.StorageView.prototype.constructor = game.MoveWithInput.StorageView;
-game.MoveWithInput._view = game.MoveWithInput.StorageView;
-game.MoveWithInput.StorageView._isSharedComp = game.MoveWithInput._isSharedComp = false;
-game.MoveWithInput.StorageView._fromPtr = game.MoveWithInput._fromPtr;
-game.MoveWithInput.StorageView._toPtr = game.MoveWithInput._toPtr;
-game.MoveWithInput.StorageView._tempHeapPtr = game.MoveWithInput._tempHeapPtr;
-game.MoveWithInput.StorageView._size = game.MoveWithInput._size;
-game.MoveWithInput.StorageView.prototype.$advance = function() {
-  this._ptr += 1;
-};
-Object.defineProperties(game.MoveWithInput.StorageView.prototype, {
-});
-game.MoveWithInput._dtorFn = function dtor(ptr) { /* POD, no-op */ }
-// game.MoveWithInput is a POD type, so a JavaScript side copy constructor game.MoveWithInput._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-game.MoveWithInput._typeDesc = (function() {
-  return ut.meta.allocType(5, 'game.MoveWithInput', 1, []);
-})();
-Object.defineProperties(game.MoveWithInput, { cid: { configurable: true, get: function() { delete game.MoveWithInput.cid; var offsetsPtr = 0, offsetsCount = 0; return game.MoveWithInput.cid = Module._ut_component_register_cid_with_type(game.MoveWithInput._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
-Object.defineProperties(game.MoveWithInput.StorageView, { cid: { configurable: true, get: function() { return game.MoveWithInput.cid; } } });
-game.PlayerTag = function() {
-};
-game.PlayerTag.prototype = Object.create(null);
-game.PlayerTag.prototype.constructor = game.PlayerTag;
-Object.defineProperties(game.PlayerTag.prototype, {
-});
-game.PlayerTag._size = 1;
-game.PlayerTag._fromPtr = function(ptr, v) {
-  v = v || Object.create(game.PlayerTag.prototype);
-  return v;
-};
-game.PlayerTag._toPtr = function(ptr, v) {
-};
-game.PlayerTag._toTempHeapPtr = function(ptr, v) {
-};
-game.PlayerTag._tempHeapPtr = function(v) {
-  var ptr = ut.tempHeapPtrBufferZero(1);
-  if (v) game.PlayerTag._toTempHeapPtr(ptr, v);
-  return ptr;
-};
-game.PlayerTag.StorageView = function(ptr) {
-  this._ptr = ptr;
-};
-game.PlayerTag.StorageView.prototype = Object.create(null);
-game.PlayerTag.StorageView.prototype.constructor = game.PlayerTag.StorageView;
-game.PlayerTag._view = game.PlayerTag.StorageView;
-game.PlayerTag.StorageView._isSharedComp = game.PlayerTag._isSharedComp = false;
-game.PlayerTag.StorageView._fromPtr = game.PlayerTag._fromPtr;
-game.PlayerTag.StorageView._toPtr = game.PlayerTag._toPtr;
-game.PlayerTag.StorageView._tempHeapPtr = game.PlayerTag._tempHeapPtr;
-game.PlayerTag.StorageView._size = game.PlayerTag._size;
-game.PlayerTag.StorageView.prototype.$advance = function() {
-  this._ptr += 1;
-};
-Object.defineProperties(game.PlayerTag.StorageView.prototype, {
-});
-game.PlayerTag._dtorFn = function dtor(ptr) { /* POD, no-op */ }
-// game.PlayerTag is a POD type, so a JavaScript side copy constructor game.PlayerTag._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-game.PlayerTag._typeDesc = (function() {
-  return ut.meta.allocType(5, 'game.PlayerTag', 1, []);
-})();
-Object.defineProperties(game.PlayerTag, { cid: { configurable: true, get: function() { delete game.PlayerTag.cid; var offsetsPtr = 0, offsetsCount = 0; return game.PlayerTag.cid = Module._ut_component_register_cid_with_type(game.PlayerTag._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
-Object.defineProperties(game.PlayerTag.StorageView, { cid: { configurable: true, get: function() { return game.PlayerTag.cid; } } });
 game.Boundaries = function(arg0, arg1, arg2, arg3) {
   this._minX = (+(arg0===undefined ? 0 : arg0));
   this._maxX = (+(arg1===undefined ? 0 : arg1));
@@ -324,6 +282,421 @@ game.Boundaries.minX = { $ofs:0, $t:"float", $c:game.Boundaries };
 game.Boundaries.maxX = { $ofs:4, $t:"float", $c:game.Boundaries };
 game.Boundaries.minY = { $ofs:8, $t:"float", $c:game.Boundaries };
 game.Boundaries.maxY = { $ofs:12, $t:"float", $c:game.Boundaries };
+game.BulletTag = function() {
+};
+game.BulletTag.prototype = Object.create(null);
+game.BulletTag.prototype.constructor = game.BulletTag;
+Object.defineProperties(game.BulletTag.prototype, {
+});
+game.BulletTag._size = 1;
+game.BulletTag._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.BulletTag.prototype);
+  return v;
+};
+game.BulletTag._toPtr = function(ptr, v) {
+};
+game.BulletTag._toTempHeapPtr = function(ptr, v) {
+};
+game.BulletTag._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) game.BulletTag._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.BulletTag.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.BulletTag.StorageView.prototype = Object.create(null);
+game.BulletTag.StorageView.prototype.constructor = game.BulletTag.StorageView;
+game.BulletTag._view = game.BulletTag.StorageView;
+game.BulletTag.StorageView._isSharedComp = game.BulletTag._isSharedComp = false;
+game.BulletTag.StorageView._fromPtr = game.BulletTag._fromPtr;
+game.BulletTag.StorageView._toPtr = game.BulletTag._toPtr;
+game.BulletTag.StorageView._tempHeapPtr = game.BulletTag._tempHeapPtr;
+game.BulletTag.StorageView._size = game.BulletTag._size;
+game.BulletTag.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(game.BulletTag.StorageView.prototype, {
+});
+game.BulletTag._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.BulletTag is a POD type, so a JavaScript side copy constructor game.BulletTag._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.BulletTag._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.BulletTag', 1, []);
+})();
+Object.defineProperties(game.BulletTag, { cid: { configurable: true, get: function() { delete game.BulletTag.cid; var offsetsPtr = 0, offsetsCount = 0; return game.BulletTag.cid = Module._ut_component_register_cid_with_type(game.BulletTag._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.BulletTag.StorageView, { cid: { configurable: true, get: function() { return game.BulletTag.cid; } } });
+game.Move = function(arg0, arg1, arg2) {
+  this._speed = (+(arg0===undefined ? 0 : arg0));
+  this._threshold = (+(arg1===undefined ? 0 : arg1));
+  this._direction = new ut.Math.Vector3(); if ((arg2) !== undefined) { this._direction.copy(arg2); };
+};
+game.Move.prototype = Object.create(null);
+game.Move.prototype.constructor = game.Move;
+Object.defineProperties(game.Move.prototype, {
+  speed: {
+    get: function() { return this._speed; },
+    set: function(v) { this._speed = (+(v===undefined ? 0 : v)); },
+  },
+  threshold: {
+    get: function() { return this._threshold; },
+    set: function(v) { this._threshold = (+(v===undefined ? 0 : v)); },
+  },
+  direction: {
+    get: function() { return this._direction; },
+    set: function(v) { this._direction.copy(v); },
+  },
+});
+game.Move._size = 20;
+game.Move._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.Move.prototype);
+  v._speed = HEAPF32[(ptr+0)>>2];
+  v._threshold = HEAPF32[(ptr+4)>>2];
+  v._direction = ut._utils.vec3FromHeap(null, ptr+8);
+  return v;
+};
+game.Move._toPtr = function(ptr, v) {
+  HEAPF32[(ptr+0)>>2] = v.speed;
+  HEAPF32[(ptr+4)>>2] = v.threshold;
+  ut._utils.vec3ToHeap(v.direction, ptr+8);
+};
+game.Move._toTempHeapPtr = function(ptr, v) {
+  HEAPF32[(ptr+0)>>2] = v.speed;
+  HEAPF32[(ptr+4)>>2] = v.threshold;
+  ut._utils.vec3ToHeap(v.direction, ptr+8);
+};
+game.Move._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(20);
+  if (v) game.Move._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.Move.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.Move.StorageView.prototype = Object.create(null);
+game.Move.StorageView.prototype.constructor = game.Move.StorageView;
+game.Move._view = game.Move.StorageView;
+game.Move.StorageView._isSharedComp = game.Move._isSharedComp = false;
+game.Move.StorageView._fromPtr = game.Move._fromPtr;
+game.Move.StorageView._toPtr = game.Move._toPtr;
+game.Move.StorageView._tempHeapPtr = game.Move._tempHeapPtr;
+game.Move.StorageView._size = game.Move._size;
+game.Move.StorageView.prototype.$advance = function() {
+  this._ptr += 20;
+};
+Object.defineProperties(game.Move.StorageView.prototype, {
+  speed: {
+    get: function() { return HEAPF32[(this._ptr+0)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+0)>>2] = v; },
+  },
+  threshold: {
+    get: function() { return HEAPF32[(this._ptr+4)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+4)>>2] = v; },
+  },
+  direction: {
+    get: function() { return ut._utils.vec3FromHeap(null, this._ptr+8); },
+    set: function(v) { if (typeof(v) !== 'object') { throw new Error('expected an object'); } ut._utils.vec3ToHeap(v, this._ptr+8); },
+  },
+});
+game.Move._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.Move is a POD type, so a JavaScript side copy constructor game.Move._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.Move._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.Move', 20, [
+    {name: 'speed', offset: 0, type: ut.meta.getType('float')},
+    {name: 'threshold', offset: 4, type: ut.meta.getType('float')},
+    {name: 'direction', offset: 8, type: ut.meta.getType('ut.Math.Vector3')}
+  ]);
+})();
+Object.defineProperties(game.Move, { cid: { configurable: true, get: function() { delete game.Move.cid; var offsetsPtr = 0, offsetsCount = 0; return game.Move.cid = Module._ut_component_register_cid_with_type(game.Move._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.Move.StorageView, { cid: { configurable: true, get: function() { return game.Move.cid; } } });
+game.Move.speed = { $ofs:0, $t:"float", $c:game.Move };
+game.Move.threshold = { $ofs:4, $t:"float", $c:game.Move };
+game.Move.direction = { $ofs:8, $t:"ut.Math.Vector3", $c:game.Move };
+game.Move.direction.z = { $ofs:16, $t:"float", $c:game.Move };
+game.Move.direction.y = { $ofs:12, $t:"float", $c:game.Move };
+game.Move.direction.x = { $ofs:8, $t:"float", $c:game.Move };
+game.MoveWithInput = function() {
+};
+game.MoveWithInput.prototype = Object.create(null);
+game.MoveWithInput.prototype.constructor = game.MoveWithInput;
+Object.defineProperties(game.MoveWithInput.prototype, {
+});
+game.MoveWithInput._size = 1;
+game.MoveWithInput._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.MoveWithInput.prototype);
+  return v;
+};
+game.MoveWithInput._toPtr = function(ptr, v) {
+};
+game.MoveWithInput._toTempHeapPtr = function(ptr, v) {
+};
+game.MoveWithInput._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) game.MoveWithInput._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.MoveWithInput.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.MoveWithInput.StorageView.prototype = Object.create(null);
+game.MoveWithInput.StorageView.prototype.constructor = game.MoveWithInput.StorageView;
+game.MoveWithInput._view = game.MoveWithInput.StorageView;
+game.MoveWithInput.StorageView._isSharedComp = game.MoveWithInput._isSharedComp = false;
+game.MoveWithInput.StorageView._fromPtr = game.MoveWithInput._fromPtr;
+game.MoveWithInput.StorageView._toPtr = game.MoveWithInput._toPtr;
+game.MoveWithInput.StorageView._tempHeapPtr = game.MoveWithInput._tempHeapPtr;
+game.MoveWithInput.StorageView._size = game.MoveWithInput._size;
+game.MoveWithInput.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(game.MoveWithInput.StorageView.prototype, {
+});
+game.MoveWithInput._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.MoveWithInput is a POD type, so a JavaScript side copy constructor game.MoveWithInput._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.MoveWithInput._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.MoveWithInput', 1, []);
+})();
+Object.defineProperties(game.MoveWithInput, { cid: { configurable: true, get: function() { delete game.MoveWithInput.cid; var offsetsPtr = 0, offsetsCount = 0; return game.MoveWithInput.cid = Module._ut_component_register_cid_with_type(game.MoveWithInput._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.MoveWithInput.StorageView, { cid: { configurable: true, get: function() { return game.MoveWithInput.cid; } } });
+game.PlayerTag = function() {
+};
+game.PlayerTag.prototype = Object.create(null);
+game.PlayerTag.prototype.constructor = game.PlayerTag;
+Object.defineProperties(game.PlayerTag.prototype, {
+});
+game.PlayerTag._size = 1;
+game.PlayerTag._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.PlayerTag.prototype);
+  return v;
+};
+game.PlayerTag._toPtr = function(ptr, v) {
+};
+game.PlayerTag._toTempHeapPtr = function(ptr, v) {
+};
+game.PlayerTag._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) game.PlayerTag._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.PlayerTag.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.PlayerTag.StorageView.prototype = Object.create(null);
+game.PlayerTag.StorageView.prototype.constructor = game.PlayerTag.StorageView;
+game.PlayerTag._view = game.PlayerTag.StorageView;
+game.PlayerTag.StorageView._isSharedComp = game.PlayerTag._isSharedComp = false;
+game.PlayerTag.StorageView._fromPtr = game.PlayerTag._fromPtr;
+game.PlayerTag.StorageView._toPtr = game.PlayerTag._toPtr;
+game.PlayerTag.StorageView._tempHeapPtr = game.PlayerTag._tempHeapPtr;
+game.PlayerTag.StorageView._size = game.PlayerTag._size;
+game.PlayerTag.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(game.PlayerTag.StorageView.prototype, {
+});
+game.PlayerTag._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.PlayerTag is a POD type, so a JavaScript side copy constructor game.PlayerTag._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.PlayerTag._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.PlayerTag', 1, []);
+})();
+Object.defineProperties(game.PlayerTag, { cid: { configurable: true, get: function() { delete game.PlayerTag.cid; var offsetsPtr = 0, offsetsCount = 0; return game.PlayerTag.cid = Module._ut_component_register_cid_with_type(game.PlayerTag._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.PlayerTag.StorageView, { cid: { configurable: true, get: function() { return game.PlayerTag.cid; } } });
+game.Shoot = function(arg0) {
+  this._bulletGroup = (arg0 === undefined ? '' : arg0);
+};
+game.Shoot.prototype = Object.create(null);
+game.Shoot.prototype.constructor = game.Shoot;
+Object.defineProperties(game.Shoot.prototype, {
+  bulletGroup: {
+    get: function() { return this._bulletGroup; },
+    set: function(v) { this._bulletGroup = (v === undefined ? '' : v); },
+  },
+});
+game.Shoot._size = 8;
+game.Shoot._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.Shoot.prototype);
+  v._bulletGroup = (Module._ut_nativestring_data(ptr+0) ? UTF8ToString(Module._ut_nativestring_data(ptr+0)) : "");
+  return v;
+};
+game.Shoot._toPtr = function(ptr, v) {
+  ut.newHeapNativeString(ptr+0, v.bulletGroup);
+};
+game.Shoot._toTempHeapPtr = function(ptr, v) {
+  ut.toExistingScratchNativeString(ptr+0, v.bulletGroup);
+};
+game.Shoot._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(8);
+  if (v) game.Shoot._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.Shoot.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.Shoot.StorageView.prototype = Object.create(null);
+game.Shoot.StorageView.prototype.constructor = game.Shoot.StorageView;
+game.Shoot._view = game.Shoot.StorageView;
+game.Shoot.StorageView._isSharedComp = game.Shoot._isSharedComp = false;
+game.Shoot.StorageView._fromPtr = game.Shoot._fromPtr;
+game.Shoot.StorageView._toPtr = game.Shoot._toPtr;
+game.Shoot.StorageView._tempHeapPtr = game.Shoot._tempHeapPtr;
+game.Shoot.StorageView._size = game.Shoot._size;
+game.Shoot.StorageView.prototype.$advance = function() {
+  this._ptr += 8;
+};
+Object.defineProperties(game.Shoot.StorageView.prototype, {
+  bulletGroup: {
+    get: function() { return (Module._ut_nativestring_data(this._ptr+0) ? UTF8ToString(Module._ut_nativestring_data(this._ptr+0)) : ""); },
+    set: function(v) { ut.newHeapNativeString(this._ptr+0, v); },
+  },
+});
+game.Shoot._dtorFn = function dtor(ptr) {
+  if (!ptr) return; 
+  Module._ut_nativestring_placement_delete(ptr + 0);
+};
+game.Shoot._copyFn = function copy(src, dst) {
+  if (!src) throw 'copy function src ptr is null!';
+  if (!dst) throw 'copy function dst ptr is null!';
+  Module._ut_nativestring_copy_construct(dst + 0, src + 0);
+};
+game.Shoot._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.Shoot', 8, [
+    {name: 'bulletGroup', offset: 0, type: ut.meta.getType('string')}
+  ]);
+})();
+Object.defineProperties(game.Shoot, { cid: { configurable: true, get: function() { delete game.Shoot.cid; var offsetsPtr = 0, offsetsCount = 0; return game.Shoot.cid = Module._ut_component_register_cid_with_type(game.Shoot._typeDesc, 4, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(game.Shoot._dtorFn), ut.CopyFn._cb.token_for(game.Shoot._copyFn)); } } });
+Object.defineProperties(game.Shoot.StorageView, { cid: { configurable: true, get: function() { return game.Shoot.cid; } } });
+game.Shoot.bulletGroup = { $ofs:0, $t:"System.String", $c:game.Shoot };
+game.StepMove = function(arg0, arg1, arg2) {
+  this._direction = new ut.Math.Vector3(); if ((arg0) !== undefined) { this._direction.copy(arg0); };
+  this._stepSize = (+(arg1===undefined ? 0 : arg1));
+  this._threshold = (+(arg2===undefined ? 0 : arg2));
+};
+game.StepMove.prototype = Object.create(null);
+game.StepMove.prototype.constructor = game.StepMove;
+Object.defineProperties(game.StepMove.prototype, {
+  direction: {
+    get: function() { return this._direction; },
+    set: function(v) { this._direction.copy(v); },
+  },
+  stepSize: {
+    get: function() { return this._stepSize; },
+    set: function(v) { this._stepSize = (+(v===undefined ? 0 : v)); },
+  },
+  threshold: {
+    get: function() { return this._threshold; },
+    set: function(v) { this._threshold = (+(v===undefined ? 0 : v)); },
+  },
+});
+game.StepMove._size = 20;
+game.StepMove._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.StepMove.prototype);
+  v._direction = ut._utils.vec3FromHeap(null, ptr+0);
+  v._stepSize = HEAPF32[(ptr+12)>>2];
+  v._threshold = HEAPF32[(ptr+16)>>2];
+  return v;
+};
+game.StepMove._toPtr = function(ptr, v) {
+  ut._utils.vec3ToHeap(v.direction, ptr+0);
+  HEAPF32[(ptr+12)>>2] = v.stepSize;
+  HEAPF32[(ptr+16)>>2] = v.threshold;
+};
+game.StepMove._toTempHeapPtr = function(ptr, v) {
+  ut._utils.vec3ToHeap(v.direction, ptr+0);
+  HEAPF32[(ptr+12)>>2] = v.stepSize;
+  HEAPF32[(ptr+16)>>2] = v.threshold;
+};
+game.StepMove._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(20);
+  if (v) game.StepMove._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.StepMove.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.StepMove.StorageView.prototype = Object.create(null);
+game.StepMove.StorageView.prototype.constructor = game.StepMove.StorageView;
+game.StepMove._view = game.StepMove.StorageView;
+game.StepMove.StorageView._isSharedComp = game.StepMove._isSharedComp = false;
+game.StepMove.StorageView._fromPtr = game.StepMove._fromPtr;
+game.StepMove.StorageView._toPtr = game.StepMove._toPtr;
+game.StepMove.StorageView._tempHeapPtr = game.StepMove._tempHeapPtr;
+game.StepMove.StorageView._size = game.StepMove._size;
+game.StepMove.StorageView.prototype.$advance = function() {
+  this._ptr += 20;
+};
+Object.defineProperties(game.StepMove.StorageView.prototype, {
+  direction: {
+    get: function() { return ut._utils.vec3FromHeap(null, this._ptr+0); },
+    set: function(v) { if (typeof(v) !== 'object') { throw new Error('expected an object'); } ut._utils.vec3ToHeap(v, this._ptr+0); },
+  },
+  stepSize: {
+    get: function() { return HEAPF32[(this._ptr+12)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+12)>>2] = v; },
+  },
+  threshold: {
+    get: function() { return HEAPF32[(this._ptr+16)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+16)>>2] = v; },
+  },
+});
+game.StepMove._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.StepMove is a POD type, so a JavaScript side copy constructor game.StepMove._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.StepMove._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.StepMove', 20, [
+    {name: 'direction', offset: 0, type: ut.meta.getType('ut.Math.Vector3')},
+    {name: 'stepSize', offset: 12, type: ut.meta.getType('float')},
+    {name: 'threshold', offset: 16, type: ut.meta.getType('float')}
+  ]);
+})();
+Object.defineProperties(game.StepMove, { cid: { configurable: true, get: function() { delete game.StepMove.cid; var offsetsPtr = 0, offsetsCount = 0; return game.StepMove.cid = Module._ut_component_register_cid_with_type(game.StepMove._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.StepMove.StorageView, { cid: { configurable: true, get: function() { return game.StepMove.cid; } } });
+game.StepMove.direction = { $ofs:0, $t:"ut.Math.Vector3", $c:game.StepMove };
+game.StepMove.direction.z = { $ofs:8, $t:"float", $c:game.StepMove };
+game.StepMove.direction.y = { $ofs:4, $t:"float", $c:game.StepMove };
+game.StepMove.direction.x = { $ofs:0, $t:"float", $c:game.StepMove };
+game.StepMove.stepSize = { $ofs:12, $t:"float", $c:game.StepMove };
+game.StepMove.threshold = { $ofs:16, $t:"float", $c:game.StepMove };
+game.WallTag = function() {
+};
+game.WallTag.prototype = Object.create(null);
+game.WallTag.prototype.constructor = game.WallTag;
+Object.defineProperties(game.WallTag.prototype, {
+});
+game.WallTag._size = 1;
+game.WallTag._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.WallTag.prototype);
+  return v;
+};
+game.WallTag._toPtr = function(ptr, v) {
+};
+game.WallTag._toTempHeapPtr = function(ptr, v) {
+};
+game.WallTag._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) game.WallTag._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.WallTag.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.WallTag.StorageView.prototype = Object.create(null);
+game.WallTag.StorageView.prototype.constructor = game.WallTag.StorageView;
+game.WallTag._view = game.WallTag.StorageView;
+game.WallTag.StorageView._isSharedComp = game.WallTag._isSharedComp = false;
+game.WallTag.StorageView._fromPtr = game.WallTag._fromPtr;
+game.WallTag.StorageView._toPtr = game.WallTag._toPtr;
+game.WallTag.StorageView._tempHeapPtr = game.WallTag._tempHeapPtr;
+game.WallTag.StorageView._size = game.WallTag._size;
+game.WallTag.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(game.WallTag.StorageView.prototype, {
+});
+game.WallTag._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.WallTag is a POD type, so a JavaScript side copy constructor game.WallTag._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.WallTag._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.WallTag', 1, []);
+})();
+Object.defineProperties(game.WallTag, { cid: { configurable: true, get: function() { delete game.WallTag.cid; var offsetsPtr = 0, offsetsCount = 0; return game.WallTag.cid = Module._ut_component_register_cid_with_type(game.WallTag._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.WallTag.StorageView, { cid: { configurable: true, get: function() { return game.WallTag.cid; } } });
 var ut = ut || {};
 ut.Core2D = ut.Core2D || {};
 ut.Core2D.layers = ut.Core2D.layers || {};
@@ -1410,8 +1783,17 @@ ut.EditorExtensions.EntityLayer._typeDesc = (function() {
 Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.EntityLayer._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.EntityLayer.cid; } } });
 ut.EditorExtensions.EntityLayer.layer = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.EntityLayer };
+game.BulletSystemJS = ut.System.define({
+  name: "game.BulletSystemJS"
+});
 game.InputMoveSystemJS = ut.System.define({
   name: "game.InputMoveSystemJS"
+});
+game.MoveSystemJS = ut.System.define({
+  name: "game.MoveSystemJS"
+});
+game.StepMoveSystemJS = ut.System.define({
+  name: "game.StepMoveSystemJS"
 });
 
 

@@ -20,6 +20,13 @@ var game;
             return _super !== null && _super.apply(this, arguments) || this;
         }
         BulletSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            var dt = this.scheduler.deltaTime();
+            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], function (bullet, rotation, position, move, BulletTag) {
+            });
+            this.world.forEach([ut.Entity, game.BulletTag, ut.HitBox2D.HitBoxOverlapResults], function (bullet, move, bulletTag, results) {
+                _this.world.destroyEntity(bullet);
+            });
         };
         return BulletSystem;
     }(ut.ComponentSystem));
@@ -35,7 +42,7 @@ var game;
         }
         InputMoveSystem.prototype.OnUpdate = function () {
             var dt = this.scheduler.deltaTime();
-            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition], function (entity, move, transformlocalposition) {
+            this.world.forEach([ut.Entity, game.StepMove, ut.Core2D.TransformLocalPosition], function (entity, move, transformlocalposition) {
                 var direction = new Vector3(0, 0, 0);
                 var position = transformlocalposition.position;
                 // Touch support
@@ -48,57 +55,41 @@ var game;
                         var touch = ut.Core2D.Input.getTouch(0);
                         if (touch.phase == ut.Core2D.TouchState.Moved) {
                             touchHappened = true;
-                            var swipeVec = move.touchSwipe;
+                            var swipeVec = move.direction;
                             swipeVec.x += touch.deltaX;
                             swipeVec.y += touch.deltaY;
-                            move.touchSwipe = swipeVec;
+                            move.direction = swipeVec;
                             touchX = swipeVec.x;
                             touchY = swipeVec.y;
                         }
                         else if (touch.phase == ut.Core2D.TouchState.Ended) {
                             touchHappened = true;
-                            var swipeVec = move.touchSwipe;
+                            var swipeVec = move.direction;
                             swipeVec.x += touch.deltaX;
                             swipeVec.y += touch.deltaY;
                             touchX = swipeVec.x;
                             touchY = swipeVec.y;
-                            move.touchSwipe = new Vector2(0, 0);
+                            move.direction = new Vector3(0, 0);
                         }
                     }
                     else {
-                        move.touchSwipe = new Vector2(0, 0);
+                        move.direction = new Vector3(0, 0);
                     }
                 }
-                if (touchHappened) {
-                    var threshold = 20;
-                    //let xDom = Math.abs(touchX) > Math.abs(touchY);
-                    if (touchX > threshold /*&& xDom*/ && position.x <= move.threshold) {
-                        direction.x += 1;
-                    }
-                    if (touchX < -threshold /*&& xDom*/ && position.x >= -move.threshold) {
-                        direction.x -= 1;
-                    }
-                    if (touchY > threshold /*&& xDom*/ && position.y <= move.threshold) {
-                        direction.y += 1;
-                    }
-                    if (touchY < -threshold /*&& xDom*/ && position.y >= -move.threshold) {
-                        direction.y -= 1;
-                    }
-                }
-                if ((ut.Runtime.Input.getKey(ut.Core2D.KeyCode.D) || ut.Runtime.Input.getKey(ut.Core2D.KeyCode.RightArrow)) && position.x <= move.threshold) {
+                if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.D) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.RightArrow)) && position.x <= move.threshold) {
                     direction.x += 1;
                 }
-                if ((ut.Runtime.Input.getKey(ut.Core2D.KeyCode.A) || ut.Runtime.Input.getKey(ut.Core2D.KeyCode.LeftArrow)) && position.x >= -move.threshold) {
+                if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.A) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.LeftArrow)) && position.x >= -move.threshold) {
                     direction.x -= 1;
                 }
-                if ((ut.Runtime.Input.getKey(ut.Core2D.KeyCode.W) || ut.Runtime.Input.getKey(ut.Core2D.KeyCode.UpArrow)) && position.y <= move.threshold) {
+                if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.W) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.UpArrow)) && position.y <= move.threshold) {
                     direction.y += 1;
                 }
-                if ((ut.Runtime.Input.getKey(ut.Core2D.KeyCode.S) || ut.Runtime.Input.getKey(ut.Core2D.KeyCode.DownArrow)) && position.y >= -move.threshold) {
+                if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.S) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.DownArrow)) && position.y >= -move.threshold) {
                     direction.y -= 1;
                 }
                 direction.normalize();
-                direction.multiplyScalar(move.speed * dt);
+                direction.multiplyScalar(move.stepSize * dt);
                 position.add(direction);
                 transformlocalposition.position = position;
             });
@@ -106,6 +97,49 @@ var game;
         return InputMoveSystem;
     }(ut.ComponentSystem));
     game.InputMoveSystem = InputMoveSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var MoveSystem = /** @class */ (function (_super) {
+        __extends(MoveSystem, _super);
+        function MoveSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MoveSystem.prototype.OnUpdate = function () {
+            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition], function (entity, move, transform) {
+                var step = transform.position;
+                var localDirection = move.direction;
+                localDirection.normalize();
+                localDirection.multiplyScalar(move.speed);
+                step.add(move.direction);
+                transform.position = step;
+            });
+        };
+        return MoveSystem;
+    }(ut.ComponentSystem));
+    game.MoveSystem = MoveSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var StepMoveSystem = /** @class */ (function (_super) {
+        __extends(StepMoveSystem, _super);
+        function StepMoveSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        StepMoveSystem.prototype.OnUpdate = function () {
+            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition], function (entity, move, transform) {
+                var step = transform.position;
+                var localDirection = move.direction;
+                localDirection.normalize();
+                step.add(move.direction);
+                transform.position = step;
+            });
+        };
+        return StepMoveSystem;
+    }(ut.ComponentSystem));
+    game.StepMoveSystem = StepMoveSystem;
 })(game || (game = {}));
 var ut;
 (function (ut) {

@@ -1,44 +1,26 @@
 /**
 
 @component
-@memberof entities.game.MainGroup
+@memberof entities.game.Background
 @name Component
 */
 /**
 
 @component
-@memberof game
-@name Move
-*/
-/**
-
-@member {float}
-@memberof game.Move
-@name speed
-*/
-/**
-
-@member {float}
-@memberof game.Move
-@name threshold
-*/
-/**
-
-@member {ut.Math.Vector2}
-@memberof game.Move
-@name touchSwipe
+@memberof entities.game.BulletGroup
+@name Component
 */
 /**
 
 @component
-@memberof game
-@name MoveWithInput
+@memberof entities.game.EnemyGroup
+@name Component
 */
 /**
 
 @component
-@memberof game
-@name PlayerTag
+@memberof entities.game.MainGroup
+@name Component
 */
 /**
 
@@ -69,6 +51,90 @@
 @member {float}
 @memberof game.Boundaries
 @name maxY
+*/
+/**
+
+@component
+@memberof game
+@name BulletTag
+*/
+/**
+
+@component
+@memberof game
+@name Move
+*/
+/**
+
+@member {float}
+@memberof game.Move
+@name speed
+*/
+/**
+
+@member {float}
+@memberof game.Move
+@name threshold
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.Move
+@name direction
+*/
+/**
+
+@component
+@memberof game
+@name MoveWithInput
+*/
+/**
+
+@component
+@memberof game
+@name PlayerTag
+*/
+/**
+
+@component
+@memberof game
+@name Shoot
+*/
+/**
+
+@member {string}
+@memberof game.Shoot
+@name bulletGroup
+*/
+/**
+
+@component
+@memberof game
+@name StepMove
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.StepMove
+@name direction
+*/
+/**
+
+@member {float}
+@memberof game.StepMove
+@name stepSize
+*/
+/**
+
+@member {float}
+@memberof game.StepMove
+@name threshold
+*/
+/**
+
+@component
+@memberof game
+@name WallTag
 */
 /**
 
@@ -308,7 +374,25 @@
 
 @system
 @memberof game
+@name BulletSystemJS
+*/
+/**
+
+@system
+@memberof game
 @name InputMoveSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name MoveSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name StepMoveSystemJS
 */
 
 

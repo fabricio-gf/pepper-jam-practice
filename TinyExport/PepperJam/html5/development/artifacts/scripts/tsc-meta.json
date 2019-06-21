@@ -7,7 +7,7 @@
             "QualifiedName": "game.BulletSystem",
             "Description": "New System",
             "Source": {
-                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
                 "Line": 5,
                 "Character": 17
             }
@@ -17,7 +17,27 @@
             "QualifiedName": "game.InputMoveSystem",
             "Description": "New System",
             "Source": {
-                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "MoveSystem",
+            "QualifiedName": "game.MoveSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "StepMoveSystem",
+            "QualifiedName": "game.StepMoveSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/StepMoveSystem.ts",
                 "Line": 5,
                 "Character": 17
             }
@@ -29,40 +49,42 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 96,
+            "Duration": 61,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 144,
+            "Duration": 227,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 606,
-            "Steps": 11
+            "Duration": 1027,
+            "Steps": 13
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 35,
+            "Duration": 111,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 20,
-            "Steps": 2
+            "Duration": 3,
+            "Steps": 4
         }
     ],
     "SourceFiles": [
-        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
-        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
-        "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
-        "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
+        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
+        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
+        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
+        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/StepMoveSystem.ts",
+        "D:/GameProjects/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
+        "D:/GameProjects/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "d3ef6f6c313db7ed51af4a033ed79b6a",
-    "GeneratedAt": "Fri Jun 21 2019 09:45:55 GMT-0300 (Hora oficial do Brasil)"
+    "InputHash": "f9b6f90d59299ff15e33f9ea65ae6416",
+    "GeneratedAt": "Fri Jun 21 2019 14:23:42 GMT-0300 (E. South America Standard Time)"
 }

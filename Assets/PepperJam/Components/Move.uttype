@@ -3,7 +3,7 @@
     "Id": "66d0889c37e84d51ade4592c45aaee35",
     "Name": "Move",
     "ExportFlags": 0,
-    "Unlisted": false,
+    "Unlisted": true,
     "Visibility": 0,
     "TypeCode": "Component",
     "Fields": [{
@@ -24,8 +24,8 @@
         "Versioned": true
     }, {
         "Id": "d6ec32631d494da0b73c3e767904d280",
-        "Name": "touchSwipe",
-        "FieldType": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+        "Name": "direction",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
         "Array": false,
         "Visibility": 0,
         "EditorOnly": false,

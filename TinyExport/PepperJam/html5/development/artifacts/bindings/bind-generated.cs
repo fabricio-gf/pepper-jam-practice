@@ -1,8 +1,72 @@
 using Unity.Collections.LowLevel.Unsafe;
+namespace entities.game.Background
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace entities.game.BulletGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace entities.game.EnemyGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
 namespace entities.game.MainGroup
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Boundaries : UTiny.IComponentData
+    {
+
+
+        public float minX;
+        public float maxX;
+        public float minY;
+        public float maxY;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct BulletTag : UTiny.IComponentData
     {
 
 
@@ -20,7 +84,7 @@ namespace game
 
         public float speed;
         public float threshold;
-        public Unity.Mathematics.float2 touchSwipe;
+        public Unity.Mathematics.float3 direction;
 
 
 
@@ -53,14 +117,38 @@ namespace game
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public struct Boundaries : UTiny.IComponentData
+    public struct Shoot : UTiny.IComponentData
     {
 
 
-        public float minX;
-        public float maxX;
-        public float minY;
-        public float maxY;
+        public string bulletGroup;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct StepMove : UTiny.IComponentData
+    {
+
+
+        public Unity.Mathematics.float3 direction;
+        public float stepSize;
+        public float threshold;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct WallTag : UTiny.IComponentData
+    {
+
+
 
 
 

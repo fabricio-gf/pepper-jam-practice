@@ -24,7 +24,7 @@
     },
     {
       "Annotation": "Download and unpack artifacts/Stevedore/7za-win-x64/.StevedoreVersion",
-      "Action": "D:\\GitHub\\pepper-jam-practice\\Tiny\\Dist\\bee.exe steve internal-unpack public 7za-win-x64/16.04-1.1.4_0d1e6ad367de3bb0c1a396856903c63e080a1e8fee52897cb5f5dee063832831.zip \"artifacts/Stevedore/7za-win-x64\"",
+      "Action": "D:\\GameProjects\\pepper-jam-practice\\Tiny\\Dist\\bee.exe steve internal-unpack public 7za-win-x64/16.04-1.1.4_0d1e6ad367de3bb0c1a396856903c63e080a1e8fee52897cb5f5dee063832831.zip \"artifacts/Stevedore/7za-win-x64\"",
       "Inputs": [],
       "Outputs": [
         "artifacts/Stevedore/7za-win-x64/.StevedoreVersion",
@@ -42,7 +42,7 @@
     },
     {
       "Annotation": "Download and unpack artifacts/Stevedore/roslyn-csc-win64/.StevedoreVersion",
-      "Action": "D:\\GitHub\\pepper-jam-practice\\Tiny\\Dist\\bee.exe steve internal-unpack public roslyn-csc-win64/6c0e221e95df_ae56073e3848e11859fa7ba9219c356153b8c416f44f335d2a8972fef099e0f1.7z \"artifacts/Stevedore/roslyn-csc-win64\"",
+      "Action": "D:\\GameProjects\\pepper-jam-practice\\Tiny\\Dist\\bee.exe steve internal-unpack public roslyn-csc-win64/6c0e221e95df_ae56073e3848e11859fa7ba9219c356153b8c416f44f335d2a8972fef099e0f1.7z \"artifacts/Stevedore/roslyn-csc-win64\"",
       "Inputs": [
         "artifacts/Stevedore/7za-win-x64/7za.exe"
       ],
@@ -62,14 +62,14 @@
       "Env": [
         {
           "Key": "BEE_INTERNAL_STEVEDORE_7ZA",
-          "Value": "D:\\GitHub\\pepper-jam-practice\\Tiny\\Dist\\artifacts\\Stevedore\\7za-win-x64\\7za.exe"
+          "Value": "D:\\GameProjects\\pepper-jam-practice\\Tiny\\Dist\\artifacts\\Stevedore\\7za-win-x64\\7za.exe"
         }
       ],
       "DebugActionIndex": 2
     },
     {
       "Annotation": "WriteResponseFile artifacts/rsp/2201356903816615512.rsp",
-      "WriteTextFilePayload": "-out:artifacts/buildprogram/buildprogram.exe /refout:\"artifacts\\Bee.CSharpSupport\\referenceassemblies\\buildprogram.exe\\6679393424876907701.dll\" -warnaserror -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/mscorlib.dll\" -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/System.dll\" -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/System.Core.dll\" -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/System.XML.dll\" -r:\"D:/GitHub/pepper-jam-practice/Tiny/Dist/bee.exe\" \"Bees\\BuildProgram.bee.cs\" -langversion:7.2 -fullpaths /debug:pdbonly /optimize+ /nologo /deterministic",
+      "WriteTextFilePayload": "-out:artifacts/buildprogram/buildprogram.exe /refout:\"artifacts\\Bee.CSharpSupport\\referenceassemblies\\buildprogram.exe\\6679393424876907701.dll\" -warnaserror -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/mscorlib.dll\" -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/System.dll\" -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/System.Core.dll\" -r:\"C:/Windows/Microsoft.NET/Framework64/v4.0.30319/System.XML.dll\" -r:\"D:/GameProjects/pepper-jam-practice/Tiny/Dist/bee.exe\" \"Bees\\BuildProgram.bee.cs\" -langversion:7.2 -fullpaths /debug:pdbonly /optimize+ /nologo /deterministic",
       "Inputs": [],
       "Outputs": [
         "artifacts/rsp/2201356903816615512.rsp"
@@ -85,7 +85,7 @@
       "Action": "\"artifacts\\Stevedore\\roslyn-csc-win64\\csc.exe\" /nostdlib /noconfig @\"artifacts\\rsp\\2201356903816615512.rsp\"",
       "Inputs": [
         "Bees/BuildProgram.bee.cs",
-        "D:/GitHub/pepper-jam-practice/Tiny/Dist/bee.exe",
+        "D:/GameProjects/pepper-jam-practice/Tiny/Dist/bee.exe",
         "artifacts/Stevedore/roslyn-csc-win64/csc.exe",
         "artifacts/rsp/2201356903816615512.rsp"
       ],

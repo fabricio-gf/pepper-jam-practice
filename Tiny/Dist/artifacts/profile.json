@@ -2,16 +2,19 @@
 "instructions_readme": "1) Open Chrome, 2) go to chrome://tracing, 3) click Load, 4) navigate to this file.",
 "traceEvents":[
 { "cat":"", "pid":1, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"tundra" } }
-,{ "pid":1, "tid":0, "ts":150173555247, "dur":5870786, "ph":"X", "name": "Tundra", "args": { "durationMS":5871, "detail":"InitData" }}
-,{ "pid":1, "tid":0, "ts":150179426307, "dur":93, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"RemoveStaleOutputs" }}
-,{ "pid":1, "tid":0, "ts":150179426400, "dur":35, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"PrepareNodes" }}
-,{ "pid":1, "tid":0, "ts":150179426458, "dur":20642, "ph":"X", "name": "Tundra", "args": { "durationMS":21, "detail":"BuildQueueInit" }}
-,{ "pid":1, "tid":0, "ts":150179465971, "dur":30898, "ph":"X", "name": "Tundra", "args": { "durationMS":31, "detail":"BuildQueueDestroy" }}
-,{ "pid":1, "tid":0, "ts":150179496870, "dur":13261, "ph":"X", "name": "Tundra", "args": { "durationMS":13, "detail":"SaveState" }}
-,{ "pid":1, "tid":2, "ts":150179448010, "dur":4109, "ph":"X", "name": "Tundra", "args": { "durationMS":4, "detail":"CheckInputSignature" }}
-,{ "pid":1, "tid":4, "ts":150179447134, "dur":855, "ph":"X", "name": "Tundra", "args": { "durationMS":1, "detail":"CheckInputSignature" }}
-,{ "pid":1, "tid":4, "ts":150179448006, "dur":17933, "ph":"X", "name": "Tundra", "args": { "durationMS":18, "detail":"CheckInputSignature" }}
-,{ "pid":1, "tid":4, "ts":150179465959, "dur":3, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"CheckInputSignature" }}
+,{ "pid":1, "tid":0, "ts":14790654606, "dur":10964254, "ph":"X", "name": "Tundra", "args": { "durationMS":10964, "detail":"InitData" }}
+,{ "pid":1, "tid":0, "ts":14801618959, "dur":12, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"RemoveStaleOutputs" }}
+,{ "pid":1, "tid":0, "ts":14801618971, "dur":10, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"PrepareNodes" }}
+,{ "pid":1, "tid":0, "ts":14801618985, "dur":275, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"BuildQueueInit" }}
+,{ "pid":1, "tid":0, "ts":14801619267, "dur":93, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"CheckInputSignature" }}
+,{ "pid":1, "tid":0, "ts":14801619619, "dur":2270165, "ph":"X", "name": "Download", "args": { "durationMS":2270, "detail":"and unpack artifacts/Stevedore/7za-win-x64/.StevedoreVersion" }}
+,{ "pid":1, "tid":0, "ts":14803889815, "dur":1470, "ph":"X", "name": "Tundra", "args": { "durationMS":1, "detail":"CheckInputSignature" }}
+,{ "pid":1, "tid":0, "ts":14803891339, "dur":1880828, "ph":"X", "name": "Download", "args": { "durationMS":1881, "detail":"and unpack artifacts/Stevedore/tiny-dist/.StevedoreVersion" }}
+,{ "pid":1, "tid":0, "ts":14805772216, "dur":4, "ph":"X", "name": "Tundra", "args": { "durationMS":0, "detail":"CheckInputSignature" }}
+,{ "pid":1, "tid":0, "ts":14805772220, "dur":1150, "ph":"X", "name": "Tundra", "args": { "durationMS":1, "detail":"BuildQueueDestroy" }}
+,{ "pid":1, "tid":0, "ts":14805773371, "dur":7974, "ph":"X", "name": "Tundra", "args": { "durationMS":8, "detail":"SaveState" }}
+,{ "pid":1, "tid":3, "ts":14803889817, "dur":1437, "ph":"X", "name": "Tundra", "args": { "durationMS":1, "detail":"CheckInputSignature" }}
+,{ "pid":1, "tid":3, "ts":14803891314, "dur":1859577, "ph":"X", "name": "Download", "args": { "durationMS":1860, "detail":"and unpack artifacts/Stevedore/tiny-samples/.StevedoreVersion" }}
 
 ]
 }
