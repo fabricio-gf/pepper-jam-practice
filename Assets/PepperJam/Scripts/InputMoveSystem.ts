@@ -10,7 +10,6 @@ namespace game {
             let dt = this.scheduler.deltaTime();
 
             this.world.forEach([ut.Entity, game.StepMove, ut.Core2D.TransformLocalPosition], (entity, move, transformlocalposition) => {
-
                 let direction = new Vector3(0, 0, 0);
                 let position = transformlocalposition.position as Vector3;
 
@@ -52,15 +51,12 @@ namespace game {
                 if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.D) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.RightArrow)) && position.x <= move.threshold) {
                     direction.x += 1;
                 }
-
                 if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.A) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.LeftArrow)) && position.x >= -move.threshold) {
                     direction.x -= 1;
                 }
-
                 if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.W) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.UpArrow)) && position.y <= move.threshold) {
                     direction.y += 1;
                 }
-
                 if ((ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.S) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.DownArrow)) && position.y >= -move.threshold) {
                     direction.y -= 1;
                 }

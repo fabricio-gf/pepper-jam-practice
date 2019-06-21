@@ -11,6 +11,12 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var game;
 (function (game) {
     /** New System */
@@ -19,18 +25,83 @@ var game;
         function BulletSystem() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        BulletSystem.prototype.OnUpdate = function () {
-            var _this = this;
-            var dt = this.scheduler.deltaTime();
-            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], function (bullet, rotation, position, move, BulletTag) {
+        BulletSystem.prototype.OnEnable = function () {
+            var playerPosition;
+            this.world.forEach([ut.Core2D.TransformLocalPosition, game.PlayerTag], function (objPos) {
+                playerPosition = objPos.position;
             });
+            console.log(playerPosition);
+            this.world.forEach([ut.Core2D.TransformLocalPosition, game.BulletTag], function (objPos, bulletTag) {
+                objPos.position = playerPosition.add(game.BulletSystem.bulletOffset);
+            });
+        };
+        BulletSystem.prototype.OnUpdate = function () {
+            //let dt = this.scheduler.deltaTime();
+            var _this = this;
+            //move bullet
+            // this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], (bullet, vector, position, move) => {
+            //     console.log("Moving bullet");
+            //     let localPosition = position.position;
+            //     localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
+            //     position.position = localPosition;
+            // });
+            //bullet hits something
             this.world.forEach([ut.Entity, game.BulletTag, ut.HitBox2D.HitBoxOverlapResults], function (bullet, move, bulletTag, results) {
                 _this.world.destroyEntity(bullet);
             });
         };
+        BulletSystem.bulletOffset = new Vector3(5, 0, 0);
         return BulletSystem;
     }(ut.ComponentSystem));
     game.BulletSystem = BulletSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var EnemySystem = /** @class */ (function (_super) {
+        __extends(EnemySystem, _super);
+        function EnemySystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        EnemySystem.prototype.OnEnable = function () {
+            this.world.forEach([ut.Core2D.TransformLocalPosition, game.Boundaries], function (position, bounds) {
+                var randomY = bounds.minY + Math.random() * (bounds.maxY - bounds.minY);
+                position.position = new Vector3(0, randomY, 0);
+            });
+        };
+        EnemySystem.prototype.OnUpdate = function () {
+        };
+        return EnemySystem;
+    }(ut.ComponentSystem));
+    game.EnemySystem = EnemySystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    var GameService = /** @class */ (function () {
+        function GameService() {
+        }
+        GameService.restart = function (world) {
+            //return; //Uncomment this line if you don't want the game to restart
+            var _this = this;
+            setTimeout(function () {
+                _this.newGame(world);
+            }, 3000);
+        };
+        ;
+        GameService.newGame = function (world) {
+            ut.Time.reset();
+            ut.EntityGroup.destroyAll(world, this.mainGroup);
+            ut.EntityGroup.destroyAll(world, this.enemyGroup);
+            ut.EntityGroup.destroyAll(world, this.explosionGroup);
+            ut.EntityGroup.instantiate(world, this.mainGroup);
+        };
+        ;
+        GameService.mainGroup = 'game.MainGroup';
+        GameService.enemyGroup = 'game.EnemyGroup';
+        GameService.explosionGroup = 'game.ExplosionGroup';
+        return GameService;
+    }());
+    game.GameService = GameService;
 })(game || (game = {}));
 var game;
 (function (game) {
@@ -107,18 +178,120 @@ var game;
             return _super !== null && _super.apply(this, arguments) || this;
         }
         MoveSystem.prototype.OnUpdate = function () {
-            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition], function (entity, move, transform) {
-                var step = transform.position;
-                var localDirection = move.direction;
-                localDirection.normalize();
-                localDirection.multiplyScalar(move.speed);
-                step.add(move.direction);
-                transform.position = step;
+            var dt = this.scheduler.deltaTime();
+            this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move], function (obj, vector, position, move) {
+                var localPosition = position.position;
+                localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
+                position.position = localPosition;
             });
         };
         return MoveSystem;
     }(ut.ComponentSystem));
     game.MoveSystem = MoveSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    var NewBehaviourFilter = /** @class */ (function (_super) {
+        __extends(NewBehaviourFilter, _super);
+        function NewBehaviourFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return NewBehaviourFilter;
+    }(ut.EntityFilter));
+    game.NewBehaviourFilter = NewBehaviourFilter;
+    var NewBehaviour = /** @class */ (function (_super) {
+        __extends(NewBehaviour, _super);
+        function NewBehaviour() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return NewBehaviour;
+    }(ut.ComponentBehaviour));
+    game.NewBehaviour = NewBehaviour;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var OffScreenDestroySystem = /** @class */ (function (_super) {
+        __extends(OffScreenDestroySystem, _super);
+        function OffScreenDestroySystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        OffScreenDestroySystem.prototype.OnUpdate = function () {
+            var _this = this;
+            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalPosition, game.DestroyOffScreenTag], function (entity, position) {
+                var localPosition = position.position;
+                if (localPosition.x >= game.OffScreenDestroySystem.OffScreenLimitX
+                    || localPosition.x <= -game.OffScreenDestroySystem.OffScreenLimitX
+                    || localPosition.y >= game.OffScreenDestroySystem.OffScreenLimitY
+                    || localPosition.y <= -game.OffScreenDestroySystem.OffScreenLimitY) {
+                    console.log("Destroy");
+                    _this.world.destroyEntity(entity);
+                }
+            });
+        };
+        OffScreenDestroySystem.OffScreenLimitX = 1000;
+        OffScreenDestroySystem.OffScreenLimitY = 1000;
+        return OffScreenDestroySystem;
+    }(ut.ComponentSystem));
+    game.OffScreenDestroySystem = OffScreenDestroySystem;
+})(game || (game = {}));
+// namespace game 
+// {
+//     /** New System */
+//     export class ScrollingBackgroundSystem extends ut.ComponentSystem 
+// 	{    
+//         OnUpdate():void 
+// 		{
+// 			let dt = ut.Time.deltaTime();
+// 			this.world.forEach([ut.Core2D.TransformLocalPosition, game.ScrollingBackground], (position, scrolling) => 
+// 			{
+// 				let localPosition = position.position;
+// 				localPosition.y -= scrolling.speed * dt;
+// 				if (localPosition.y < scrolling.threshold) 
+// 					localPosition.y += scrolling.distance;
+// 				position.position = localPosition;
+// 			});
+//         }
+//     }
+// }
+var game;
+(function (game) {
+    /** New System */
+    var SpawnerSystem = /** @class */ (function (_super) {
+        __extends(SpawnerSystem, _super);
+        function SpawnerSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        SpawnerSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            var dt = ut.Time.deltaTime();
+            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalPosition, game.Spawner], function (entity, position, spawner) {
+                if (spawner.isPaused) {
+                    return;
+                }
+                var time = spawner.time;
+                var delay = spawner.delay;
+                time -= dt;
+                if (time <= 0) {
+                    time += delay;
+                    var obj = ut.EntityGroup.instantiate(_this.world, spawner.spawnGroup)[0];
+                    //IF SPAWNED OBJECT IS BULLET
+                    // this.world.usingComponentData(obj, [ut.Core2D.TransformLocalPosition, BulletTag], (objPos, bulletTag) => {
+                    //     let playerPos = position.position;
+                    //     objPos.position = playerPos.add(game.SpawnerSystem.bulletOffset);
+                    // });
+                    //IF SPAWNED OBJECT IS ENEMY
+                    // this.world.usingComponentData(obj, [ut.Core2D.TransformLocalPosition, game.Boundaries, EnemyTag], (objPos, bounds) => {
+                    //     let enemyPos = objPos.position;
+                    //     //enemyPos = 
+                    // });
+                }
+                spawner.time = time;
+            });
+        };
+        return SpawnerSystem;
+    }(ut.ComponentSystem));
+    game.SpawnerSystem = SpawnerSystem;
 })(game || (game = {}));
 var game;
 (function (game) {
@@ -141,6 +314,46 @@ var game;
     }(ut.ComponentSystem));
     game.StepMoveSystem = StepMoveSystem;
 })(game || (game = {}));
+var ut;
+(function (ut) {
+    /**
+     * Placeholder system to provide a UnityEngine.Time like API
+     *
+     * e.g.
+     *  let deltaTime = ut.Time.deltaTime();
+     *  let time = ut.Time.time();
+     *
+     */
+    var Time = /** @class */ (function (_super) {
+        __extends(Time, _super);
+        function Time() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Time_1 = Time;
+        Time.deltaTime = function () {
+            return Time_1._deltaTime;
+        };
+        Time.time = function () {
+            return Time_1._time;
+        };
+        Time.reset = function () {
+            Time_1._time = 0;
+        };
+        Time.prototype.OnUpdate = function () {
+            var dt = this.scheduler.deltaTime();
+            Time_1._deltaTime = dt;
+            Time_1._time += dt;
+        };
+        var Time_1;
+        Time._deltaTime = 0;
+        Time._time = 0;
+        Time = Time_1 = __decorate([
+            ut.executeBefore(ut.Shared.UserCodeStart)
+        ], Time);
+        return Time;
+    }(ut.ComponentSystem));
+    ut.Time = Time;
+})(ut || (ut = {}));
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

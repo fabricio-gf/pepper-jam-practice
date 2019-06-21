@@ -3,17 +3,17 @@ namespace game {
 
     /** New System */
     export class MoveSystem extends ut.ComponentSystem {
-        
-        OnUpdate(): void {
-            this.world.forEach([ut.Entity, game.Move, ut.Core2D.TransformLocalPosition],
-                (entity, move, transform) => {
-                    let step = transform.position;
-                    let localDirection = move.direction;
-                    localDirection.normalize();
-                    localDirection.multiplyScalar(move.speed);
-                    step.add(move.direction);
-                    transform.position = step;
-                });
+
+        OnUpdate():void {
+
+            let dt = this.scheduler.deltaTime();
+
+            this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move], (obj, vector, position, move) => {
+                let localPosition = position.position;
+                localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
+
+                position.position = localPosition;
+            });
         }
     }
 }

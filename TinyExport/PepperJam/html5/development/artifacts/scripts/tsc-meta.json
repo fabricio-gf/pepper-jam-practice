@@ -1,90 +1,118 @@
 {
-    "Success": true,
-    "Diagnostics": [],
-    "Systems": [
+    "Success": false,
+    "Diagnostics": [
         {
-            "Name": "BulletSystem",
-            "QualifiedName": "game.BulletSystem",
-            "Description": "New System",
+            "Category": 1,
+            "Message": "Property 'isPaused' does not exist on type 'Spawner'.",
             "Source": {
-                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
-                "Line": 5,
-                "Character": 17
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
+                "Line": 11,
+                "Character": 28
             }
         },
         {
-            "Name": "InputMoveSystem",
-            "QualifiedName": "game.InputMoveSystem",
-            "Description": "New System",
+            "Category": 1,
+            "Message": "Property 'time' does not exist on type 'Spawner'.",
             "Source": {
-                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
-                "Line": 5,
-                "Character": 17
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
+                "Line": 15,
+                "Character": 36
             }
         },
         {
-            "Name": "MoveSystem",
-            "QualifiedName": "game.MoveSystem",
-            "Description": "New System",
+            "Category": 1,
+            "Message": "Property 'delay' does not exist on type 'Spawner'.",
             "Source": {
-                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
-                "Line": 5,
-                "Character": 17
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
+                "Line": 16,
+                "Character": 37
             }
         },
         {
-            "Name": "StepMoveSystem",
-            "QualifiedName": "game.StepMoveSystem",
-            "Description": "New System",
+            "Category": 1,
+            "Message": "Property 'spawnGroup' does not exist on type 'Spawner'.",
             "Source": {
-                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/StepMoveSystem.ts",
-                "Line": 5,
-                "Character": 17
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
+                "Line": 23,
+                "Character": 78
+            }
+        },
+        {
+            "Category": 1,
+            "Message": "Property 'time' does not exist on type 'Spawner'.",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
+                "Line": 38,
+                "Character": 25
+            }
+        },
+        {
+            "Category": 1,
+            "Message": "Property or signature expected.",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/TinyExport/PepperJam/html5/development/artifacts/scripts/bind-generated.d.ts",
+                "Line": 353,
+                "Character": 13
+            }
+        },
+        {
+            "Category": 1,
+            "Message": "';' expected.",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/TinyExport/PepperJam/html5/development/artifacts/scripts/bind-generated.d.ts",
+                "Line": 353,
+                "Character": 15
+            }
+        },
+        {
+            "Category": 1,
+            "Message": "Declaration or statement expected.",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/TinyExport/PepperJam/html5/development/artifacts/scripts/bind-generated.d.ts",
+                "Line": 357,
+                "Character": 5
+            }
+        },
+        {
+            "Category": 1,
+            "Message": "Declaration or statement expected.",
+            "Source": {
+                "File": "D:/GameProjects/pepper-jam-practice/TinyExport/PepperJam/html5/development/artifacts/scripts/bind-generated.d.ts",
+                "Line": 358,
+                "Character": 1
             }
         }
     ],
+    "Systems": [],
     "Filters": [],
     "Behaviours": [],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 61,
+            "Duration": 64,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 227,
+            "Duration": 229,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1027,
-            "Steps": 13
+            "Duration": 1130,
+            "Steps": 20
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 111,
+            "Duration": 154,
             "Steps": 2
-        },
-        {
-            "Key": "metadata",
-            "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 3,
-            "Steps": 4
         }
     ],
-    "SourceFiles": [
-        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
-        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
-        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
-        "D:/GameProjects/pepper-jam-practice/Assets/PepperJam/Scripts/StepMoveSystem.ts",
-        "D:/GameProjects/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
-        "D:/GameProjects/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
-    ],
-    "InputHash": "f9b6f90d59299ff15e33f9ea65ae6416",
-    "GeneratedAt": "Fri Jun 21 2019 14:23:42 GMT-0300 (E. South America Standard Time)"
+    "SourceFiles": [],
+    "InputHash": "bc705512d869a718c323f2227eb7c6cd",
+    "GeneratedAt": "Fri Jun 21 2019 14:53:07 GMT-0300 (E. South America Standard Time)"
 }

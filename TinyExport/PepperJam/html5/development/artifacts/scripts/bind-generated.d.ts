@@ -140,17 +140,17 @@ declare namespace game{
         static _tempHeapPtr(v: PlayerTag): number;
         static _dtorFn(v: PlayerTag): void;
     }
-    class Shoot extends ut.Component {
+    class Spawner extends ut.Component {
         constructor();
         bulletGroup: string;
         static readonly cid: number;
         static readonly _view: any;
         static readonly _isSharedComp: boolean;
         static _size: number;
-        static _fromPtr(p: number, v?: Shoot): Shoot;
-        static _toPtr(p: number, v: Shoot): void;
-        static _tempHeapPtr(v: Shoot): number;
-        static _dtorFn(v: Shoot): void;
+        static _fromPtr(p: number, v?: Spawner): Spawner;
+        static _toPtr(p: number, v: Spawner): void;
+        static _tempHeapPtr(v: Spawner): number;
+        static _dtorFn(v: Spawner): void;
     }
     class StepMove extends ut.Component {
         constructor();
@@ -176,6 +176,40 @@ declare namespace game{
         static _toPtr(p: number, v: WallTag): void;
         static _tempHeapPtr(v: WallTag): number;
         static _dtorFn(v: WallTag): void;
+    }
+    class EnemyTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: EnemyTag): EnemyTag;
+        static _toPtr(p: number, v: EnemyTag): void;
+        static _tempHeapPtr(v: EnemyTag): number;
+        static _dtorFn(v: EnemyTag): void;
+    }
+    class DestroyOffScreenTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: DestroyOffScreenTag): DestroyOffScreenTag;
+        static _toPtr(p: number, v: DestroyOffScreenTag): void;
+        static _tempHeapPtr(v: DestroyOffScreenTag): number;
+        static _dtorFn(v: DestroyOffScreenTag): void;
+    }
+    class ForwardVector extends ut.Component {
+        constructor();
+        forward: ut.Math.Vector3;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: ForwardVector): ForwardVector;
+        static _toPtr(p: number, v: ForwardVector): void;
+        static _tempHeapPtr(v: ForwardVector): number;
+        static _dtorFn(v: ForwardVector): void;
     }
 }
 declare namespace ut{
@@ -316,8 +350,9 @@ declare namespace ut{
             [data: string]: EntityGroupData;
             Background: EntityGroupData;
             BulletGroup: EntityGroupData;
-            EnemyGroup: EntityGroupData;
+            04bc9b12a6f15c54dbd8668912dc38ba: EntityGroupData;
             MainGroup: EntityGroupData;
+            EnemyGroup: EntityGroupData;
         }
     }
 }
