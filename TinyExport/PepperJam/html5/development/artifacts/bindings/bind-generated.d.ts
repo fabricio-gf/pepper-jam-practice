@@ -30,6 +30,22 @@ class Component extends ut.Component {
 }
 
 }
+declare namespace entities.game.EnemyGroup {
+
+class Component extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: Component): Component;
+  static _toPtr(p: number, v: Component): void;
+  static _tempHeapPtr(v: Component): number;
+  static _dtorFn(v: Component): void;
+}
+
+}
 declare namespace entities.game.MainGroup {
 
 class Component extends ut.Component {
@@ -99,6 +115,22 @@ class DestroyOffScreenTag extends ut.Component {
   static _toPtr(p: number, v: DestroyOffScreenTag): void;
   static _tempHeapPtr(v: DestroyOffScreenTag): number;
   static _dtorFn(v: DestroyOffScreenTag): void;
+}
+
+}
+declare namespace game {
+
+class EnemyTag extends ut.Component {
+  constructor();
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: EnemyTag): EnemyTag;
+  static _toPtr(p: number, v: EnemyTag): void;
+  static _tempHeapPtr(v: EnemyTag): number;
+  static _dtorFn(v: EnemyTag): void;
 }
 
 }
@@ -176,11 +208,11 @@ class PlayerTag extends ut.Component {
 }
 declare namespace game {
 
-class Shoot extends ut.Component {
-  constructor(time?: number, delay?: number, bulletGroup?: string, isPaused?: boolean);
+class Spawner extends ut.Component {
+  constructor(time?: number, delay?: number, spawnGroup?: string, isPaused?: boolean);
   time: number;
   delay: number;
-  bulletGroup: string;
+  spawnGroup: string;
   isPaused: boolean;
   static readonly time: ComponentFieldDesc;
   static readonly delay: ComponentFieldDesc;
@@ -191,10 +223,10 @@ class Shoot extends ut.Component {
   static readonly _isSharedComp: boolean;
 
   static _size: number;
-  static _fromPtr(p: number, v?: Shoot): Shoot;
-  static _toPtr(p: number, v: Shoot): void;
-  static _tempHeapPtr(v: Shoot): number;
-  static _dtorFn(v: Shoot): void;
+  static _fromPtr(p: number, v?: Spawner): Spawner;
+  static _toPtr(p: number, v: Spawner): void;
+  static _tempHeapPtr(v: Spawner): number;
+  static _dtorFn(v: Spawner): void;
 }
 
 }
@@ -517,16 +549,46 @@ class EntityLayer extends ut.Component {
 
 }
 declare namespace game {
+
+class NewBehaviour_State extends ut.Component {
+  constructor(initialized?: boolean, enabled?: boolean, onEnableCalled?: boolean, onDisableCalled?: boolean);
+  initialized: boolean;
+  enabled: boolean;
+  onEnableCalled: boolean;
+  onDisableCalled: boolean;
+  static readonly initialized: ComponentFieldDesc;
+  static readonly enabled: ComponentFieldDesc;
+  static readonly onEnableCalled: ComponentFieldDesc;
+  static readonly onDisableCalled: ComponentFieldDesc;
+  static readonly cid: number;
+  static readonly _view: any;
+  static readonly _isSharedComp: boolean;
+
+  static _size: number;
+  static _fromPtr(p: number, v?: NewBehaviour_State): NewBehaviour_State;
+  static _toPtr(p: number, v: NewBehaviour_State): void;
+  static _tempHeapPtr(v: NewBehaviour_State): number;
+  static _dtorFn(v: NewBehaviour_State): void;
+}
+
+}
+declare namespace game {
 var BulletSystemJS: ut.SystemJS;
+}
+declare namespace game {
+var EnemySystemJS: ut.SystemJS;
 }
 declare namespace game {
 var InputMoveSystemJS: ut.SystemJS;
 }
 declare namespace game {
-var InputShootSystemJS: ut.SystemJS;
+var MoveSystemJS: ut.SystemJS;
 }
 declare namespace game {
 var OffScreenDestroySystemJS: ut.SystemJS;
+}
+declare namespace game {
+var SpawnerSystemJS: ut.SystemJS;
 }
 declare namespace ut {
 var TimeJS: ut.SystemJS;

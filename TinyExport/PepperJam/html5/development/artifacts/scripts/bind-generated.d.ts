@@ -115,6 +115,17 @@ declare namespace game{
         static _tempHeapPtr(v: DestroyOffScreenTag): number;
         static _dtorFn(v: DestroyOffScreenTag): void;
     }
+    class EnemyTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: EnemyTag): EnemyTag;
+        static _toPtr(p: number, v: EnemyTag): void;
+        static _tempHeapPtr(v: EnemyTag): number;
+        static _dtorFn(v: EnemyTag): void;
+    }
     class ForwardVector extends ut.Component {
         constructor();
         forward: ut.Math.Vector3;
@@ -163,20 +174,20 @@ declare namespace game{
         static _tempHeapPtr(v: PlayerTag): number;
         static _dtorFn(v: PlayerTag): void;
     }
-    class Shoot extends ut.Component {
+    class Spawner extends ut.Component {
         constructor();
         time: number;
         delay: number;
-        bulletGroup: string;
+        spawnGroup: string;
         isPaused: boolean;
         static readonly cid: number;
         static readonly _view: any;
         static readonly _isSharedComp: boolean;
         static _size: number;
-        static _fromPtr(p: number, v?: Shoot): Shoot;
-        static _toPtr(p: number, v: Shoot): void;
-        static _tempHeapPtr(v: Shoot): number;
-        static _dtorFn(v: Shoot): void;
+        static _fromPtr(p: number, v?: Spawner): Spawner;
+        static _toPtr(p: number, v: Spawner): void;
+        static _tempHeapPtr(v: Spawner): number;
+        static _dtorFn(v: Spawner): void;
     }
     class WallTag extends ut.Component {
         constructor();
@@ -328,6 +339,7 @@ declare namespace ut{
             [data: string]: EntityGroupData;
             Background: EntityGroupData;
             BulletGroup: EntityGroupData;
+            EnemyGroup: EntityGroupData;
             MainGroup: EntityGroupData;
         }
     }

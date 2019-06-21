@@ -23,6 +23,18 @@ namespace entities.game.BulletGroup
 
     }
 }
+namespace entities.game.EnemyGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
 namespace entities.game.MainGroup
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -67,6 +79,18 @@ namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct DestroyOffScreenTag : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct EnemyTag : UTiny.IComponentData
     {
 
 
@@ -130,13 +154,13 @@ namespace game
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public struct Shoot : UTiny.IComponentData
+    public struct Spawner : UTiny.IComponentData
     {
 
 
         public float time;
         public float delay;
-        public string bulletGroup;
+        public string spawnGroup;
         public bool isPaused;
 
 
@@ -365,6 +389,22 @@ namespace ut.EditorExtensions
 
 
         public int layer;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct NewBehaviour_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
 
 
 

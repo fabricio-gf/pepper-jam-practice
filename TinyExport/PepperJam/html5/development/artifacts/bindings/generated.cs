@@ -25,6 +25,12 @@ namespace entities.game
         {
         }
     }
+    namespace EnemyGroup
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
     namespace MainGroup
     {
         public struct Component : IComponentData
@@ -48,6 +54,9 @@ namespace game
     public struct DestroyOffScreenTag : IComponentData
     {
     }
+    public struct EnemyTag : IComponentData
+    {
+    }
     public struct ForwardVector : IComponentData
     {
         public Vector3 forward;
@@ -64,11 +73,11 @@ namespace game
     public struct PlayerTag : IComponentData
     {
     }
-    public struct Shoot : IComponentData
+    public struct Spawner : IComponentData
     {
         public float time;
         public float delay;
-        public string bulletGroup;
+        public string spawnGroup;
         public bool isPaused;
     }
     public struct WallTag : IComponentData
@@ -215,7 +224,23 @@ namespace ut.HitBox2D
 }
 namespace game
 {
+    public struct NewBehaviour_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
     public class BulletSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    public class EnemySystemJS : IComponentSystem
     {
     }
 }
@@ -227,13 +252,19 @@ namespace game
 }
 namespace game
 {
-    public class InputShootSystemJS : IComponentSystem
+    public class MoveSystemJS : IComponentSystem
     {
     }
 }
 namespace game
 {
     public class OffScreenDestroySystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    public class SpawnerSystemJS : IComponentSystem
     {
     }
 }

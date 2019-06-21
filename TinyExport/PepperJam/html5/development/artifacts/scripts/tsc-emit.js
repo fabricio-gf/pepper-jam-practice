@@ -25,22 +25,55 @@ var game;
         function BulletSystem() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        BulletSystem.prototype.OnUpdate = function () {
-            var _this = this;
-            var dt = this.scheduler.deltaTime();
-            this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], function (bullet, vector, position, move) {
-                console.log("Moving bullet");
-                var localPosition = position.position;
-                localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
-                position.position = localPosition;
+        BulletSystem.prototype.OnEnable = function () {
+            var playerPosition;
+            this.world.forEach([ut.Core2D.TransformLocalPosition, game.PlayerTag], function (objPos) {
+                playerPosition = objPos.position;
             });
+            console.log(playerPosition);
+            this.world.forEach([ut.Core2D.TransformLocalPosition, game.BulletTag], function (objPos, bulletTag) {
+                objPos.position = playerPosition.add(game.BulletSystem.bulletOffset);
+            });
+        };
+        BulletSystem.prototype.OnUpdate = function () {
+            //let dt = this.scheduler.deltaTime();
+            var _this = this;
+            //move bullet
+            // this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move, game.BulletTag], (bullet, vector, position, move) => {
+            //     console.log("Moving bullet");
+            //     let localPosition = position.position;
+            //     localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
+            //     position.position = localPosition;
+            // });
+            //bullet hits something
             this.world.forEach([ut.Entity, game.BulletTag, ut.HitBox2D.HitBoxOverlapResults], function (bullet, move, bulletTag, results) {
                 _this.world.destroyEntity(bullet);
             });
         };
+        BulletSystem.bulletOffset = new Vector3(5, 0, 0);
         return BulletSystem;
     }(ut.ComponentSystem));
     game.BulletSystem = BulletSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var EnemySystem = /** @class */ (function (_super) {
+        __extends(EnemySystem, _super);
+        function EnemySystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        EnemySystem.prototype.OnEnable = function () {
+            this.world.forEach([ut.Core2D.TransformLocalPosition, game.Boundaries], function (position, bounds) {
+                var randomY = bounds.minY + Math.random() * (bounds.maxY - bounds.minY);
+                position.position = new Vector3(0, randomY, 0);
+            });
+        };
+        EnemySystem.prototype.OnUpdate = function () {
+        };
+        return EnemySystem;
+    }(ut.ComponentSystem));
+    game.EnemySystem = EnemySystem;
 })(game || (game = {}));
 var game;
 (function (game) {
@@ -155,31 +188,41 @@ var game;
 var game;
 (function (game) {
     /** New System */
-    var InputShootSystem = /** @class */ (function (_super) {
-        __extends(InputShootSystem, _super);
-        function InputShootSystem() {
+    var MoveSystem = /** @class */ (function (_super) {
+        __extends(MoveSystem, _super);
+        function MoveSystem() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        InputShootSystem.prototype.OnUpdate = function () {
-            var _this = this;
-            var dt = ut.Time.deltaTime();
-            this.world.forEach([ut.Entity, game.Shoot], function (entity, shoot) {
-                if (shoot.isPaused) {
-                    return;
-                }
-                var time = shoot.time;
-                var delay = shoot.delay;
-                time -= dt;
-                if (time <= 0) {
-                    time += delay;
-                    ut.EntityGroup.instantiate(_this.world, shoot.bulletGroup);
-                }
-                shoot.time = time;
+        MoveSystem.prototype.OnUpdate = function () {
+            var dt = this.scheduler.deltaTime();
+            this.world.forEach([ut.Entity, game.ForwardVector, ut.Core2D.TransformLocalPosition, game.Move], function (obj, vector, position, move) {
+                var localPosition = position.position;
+                localPosition.add(vector.forward.normalize().multiplyScalar(move.speed * dt));
+                position.position = localPosition;
             });
         };
-        return InputShootSystem;
+        return MoveSystem;
     }(ut.ComponentSystem));
-    game.InputShootSystem = InputShootSystem;
+    game.MoveSystem = MoveSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
+    var NewBehaviourFilter = /** @class */ (function (_super) {
+        __extends(NewBehaviourFilter, _super);
+        function NewBehaviourFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return NewBehaviourFilter;
+    }(ut.EntityFilter));
+    game.NewBehaviourFilter = NewBehaviourFilter;
+    var NewBehaviour = /** @class */ (function (_super) {
+        __extends(NewBehaviour, _super);
+        function NewBehaviour() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return NewBehaviour;
+    }(ut.ComponentBehaviour));
+    game.NewBehaviour = NewBehaviour;
 })(game || (game = {}));
 var game;
 (function (game) {
@@ -227,6 +270,45 @@ var game;
 //         }
 //     }
 // }
+var game;
+(function (game) {
+    /** New System */
+    var SpawnerSystem = /** @class */ (function (_super) {
+        __extends(SpawnerSystem, _super);
+        function SpawnerSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        SpawnerSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            var dt = ut.Time.deltaTime();
+            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalPosition, game.Spawner], function (entity, position, spawner) {
+                if (spawner.isPaused) {
+                    return;
+                }
+                var time = spawner.time;
+                var delay = spawner.delay;
+                time -= dt;
+                if (time <= 0) {
+                    time += delay;
+                    var obj = ut.EntityGroup.instantiate(_this.world, spawner.spawnGroup)[0];
+                    //IF SPAWNED OBJECT IS BULLET
+                    // this.world.usingComponentData(obj, [ut.Core2D.TransformLocalPosition, BulletTag], (objPos, bulletTag) => {
+                    //     let playerPos = position.position;
+                    //     objPos.position = playerPos.add(game.SpawnerSystem.bulletOffset);
+                    // });
+                    //IF SPAWNED OBJECT IS ENEMY
+                    // this.world.usingComponentData(obj, [ut.Core2D.TransformLocalPosition, game.Boundaries, EnemyTag], (objPos, bounds) => {
+                    //     let enemyPos = objPos.position;
+                    //     //enemyPos = 
+                    // });
+                }
+                spawner.time = time;
+            });
+        };
+        return SpawnerSystem;
+    }(ut.ComponentSystem));
+    game.SpawnerSystem = SpawnerSystem;
+})(game || (game = {}));
 var ut;
 (function (ut) {
     /**

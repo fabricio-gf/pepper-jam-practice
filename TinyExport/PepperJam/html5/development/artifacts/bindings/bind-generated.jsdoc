@@ -13,6 +13,12 @@
 /**
 
 @component
+@memberof entities.game.EnemyGroup
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.MainGroup
 @name Component
 */
@@ -57,6 +63,12 @@
 @component
 @memberof game
 @name DestroyOffScreenTag
+*/
+/**
+
+@component
+@memberof game
+@name EnemyTag
 */
 /**
 
@@ -110,30 +122,30 @@
 
 @component
 @memberof game
-@name Shoot
+@name Spawner
 */
 /**
 
 @member {float}
-@memberof game.Shoot
+@memberof game.Spawner
 @name time
 */
 /**
 
 @member {float}
-@memberof game.Shoot
+@memberof game.Spawner
 @name delay
 */
 /**
 
 @member {string}
-@memberof game.Shoot
-@name bulletGroup
+@memberof game.Spawner
+@name spawnGroup
 */
 /**
 
 @member {bool}
-@memberof game.Shoot
+@memberof game.Spawner
 @name isPaused
 */
 /**
@@ -378,9 +390,45 @@
 */
 /**
 
+@component
+@memberof game
+@name NewBehaviour_State
+*/
+/**
+
+@member {bool}
+@memberof game.NewBehaviour_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.NewBehaviour_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.NewBehaviour_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.NewBehaviour_State
+@name onDisableCalled
+*/
+/**
+
 @system
 @memberof game
 @name BulletSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name EnemySystemJS
 */
 /**
 
@@ -392,13 +440,19 @@
 
 @system
 @memberof game
-@name InputShootSystemJS
+@name MoveSystemJS
 */
 /**
 
 @system
 @memberof game
 @name OffScreenDestroySystemJS
+*/
+/**
+
+@system
+@memberof game
+@name SpawnerSystemJS
 */
 /**
 

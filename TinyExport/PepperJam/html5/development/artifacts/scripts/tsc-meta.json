@@ -13,6 +13,16 @@
             }
         },
         {
+            "Name": "EnemySystem",
+            "QualifiedName": "game.EnemySystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/EnemySystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
             "Name": "InputMoveSystem",
             "QualifiedName": "game.InputMoveSystem",
             "Description": "New System",
@@ -23,11 +33,11 @@
             }
         },
         {
-            "Name": "InputShootSystem",
-            "QualifiedName": "game.InputShootSystem",
+            "Name": "MoveSystem",
+            "QualifiedName": "game.MoveSystem",
             "Description": "New System",
             "Source": {
-                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputShootSystem.ts",
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
                 "Line": 5,
                 "Character": 17
             }
@@ -38,6 +48,16 @@
             "Description": "New System",
             "Source": {
                 "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/OffScreenDestroySystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "SpawnerSystem",
+            "QualifiedName": "game.SpawnerSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
                 "Line": 5,
                 "Character": 17
             }
@@ -56,51 +76,150 @@
             ]
         }
     ],
-    "Filters": [],
-    "Behaviours": [],
+    "Filters": [
+        {
+            "Name": "NewBehaviourFilter",
+            "QualifiedName": "game.NewBehaviourFilter",
+            "Description": "",
+            "Source": {
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                        "Line": 4,
+                        "Character": 62
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "position",
+                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
+                    "Description": "",
+                    "Source": {
+                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                        "Line": 5,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "rotation",
+                    "QualifiedName": "ut.Core2D.TransformLocalRotation",
+                    "Description": "",
+                    "Source": {
+                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                        "Line": 6,
+                        "Character": 53
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "scale",
+                    "QualifiedName": "ut.Core2D.TransformLocalScale",
+                    "Description": "",
+                    "Source": {
+                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                        "Line": 7,
+                        "Character": 53
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                }
+            ]
+        }
+    ],
+    "Behaviours": [
+        {
+            "Name": "NewBehaviour",
+            "QualifiedName": "game.NewBehaviour",
+            "Description": "",
+            "Source": {
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                "Line": 11,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.NewBehaviourFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
+                        "Line": 11,
+                        "Character": 62
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        }
+    ],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 102,
+            "Duration": 104,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 145,
+            "Duration": 147,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 761,
-            "Steps": 16
+            "Duration": 674,
+            "Steps": 19
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 51,
+            "Duration": 62,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 4,
-            "Steps": 5
+            "Duration": 6,
+            "Steps": 7
         }
     ],
     "SourceFiles": [
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/EnemySystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/GameService.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
-        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputShootSystem.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/MoveSystem.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/NewBehaviour.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/OffScreenDestroySystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/ScrollingBackgroundSystem.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/SpawnerSystem.ts",
         "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/Time.ts",
         "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "ae8bfa44e7572012e6bfc1084f71fda6",
-    "GeneratedAt": "Fri Jun 21 2019 11:04:55 GMT-0300 (Hora oficial do Brasil)"
+    "InputHash": "2415646b0ba58763bd31a4ec2092eb73",
+    "GeneratedAt": "Fri Jun 21 2019 14:23:15 GMT-0300 (Hora oficial do Brasil)"
 }

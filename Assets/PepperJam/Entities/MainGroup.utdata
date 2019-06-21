@@ -6,7 +6,8 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "c2102a7077844d4dbaf0409dc4221d3f", "Name": "Camera" },
-        { "$TypeId": 9, "Id": "b28af214ca764e8a9c2294c089b070bf", "Name": "Player" }
+        { "$TypeId": 9, "Id": "b28af214ca764e8a9c2294c089b070bf", "Name": "Player" },
+        { "$TypeId": 9, "Id": "579992e11b914454abd3573f07729061", "Name": "EnemySpawner" }
     ]
 },
 {
@@ -111,11 +112,31 @@
     }, {
         "Type": { "Id": "c2e345f33353433ba2095208b3a8aeb7", "Name": "PlayerTag" }
     }, {
-        "Type": { "Id": "0a44959ee0e24f0aba3a2e9eeca0a367", "Name": "Shoot" },
+        "Type": { "Id": "0a44959ee0e24f0aba3a2e9eeca0a367", "Name": "Spawner" },
         "Properties": {
             "delay": 1.5,
-            "bulletGroup": "game.BulletGroup",
+            "spawnGroup": "game.BulletGroup",
             "isPaused": false
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 2
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "579992e11b914454abd3573f07729061",
+    "Name": "EnemySpawner",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "0a44959ee0e24f0aba3a2e9eeca0a367", "Name": "Spawner" },
+        "Properties": {
+            "delay": 1.5,
+            "spawnGroup": "game.EnemyGroup"
         }
     }]
 }]

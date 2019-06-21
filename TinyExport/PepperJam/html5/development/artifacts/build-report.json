@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 8759,
+                "Size": 9431,
                 "CompressedSize": 0
             }
         }, {
@@ -82,8 +82,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/entities.js",
-                "Size": 6669,
-                "CompressedSize": 1451
+                "Size": 9482,
+                "CompressedSize": 1658
             },
             "Children": [{
                 "Item": {
@@ -94,21 +94,27 @@
             }, {
                 "Item": {
                     "Name": "BulletGroup",
-                    "Size": 2202,
-                    "CompressedSize": 718
+                    "Size": 2327,
+                    "CompressedSize": 750
+                }
+            }, {
+                "Item": {
+                    "Name": "EnemyGroup",
+                    "Size": 2245,
+                    "CompressedSize": 712
                 }
             }, {
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 2978,
-                    "CompressedSize": 925
+                    "Size": 3423,
+                    "CompressedSize": 1007
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/bindings.js",
-                "Size": 108642,
-                "CompressedSize": 9033
+                "Size": 118805,
+                "CompressedSize": 9905
             }
         }, {
             "Item": {
@@ -119,15 +125,15 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/PepperJam/html5/development/artifacts/scripts/tsc-emit.js",
-                    "Size": 15051,
-                    "CompressedSize": 3151
+                    "Size": 18902,
+                    "CompressedSize": 3661
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/PepperJam/html5/development/build/main.js",
-                "Size": 2783,
-                "CompressedSize": 859
+                "Size": 4947,
+                "CompressedSize": 1276
             }
         }, {
             "Item": {
