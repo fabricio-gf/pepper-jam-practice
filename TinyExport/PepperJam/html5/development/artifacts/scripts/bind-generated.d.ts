@@ -78,6 +78,91 @@ declare namespace ut {
 }
 declare var UT_ASSETS: Object;
 declare namespace game{
+    class Move extends ut.Component {
+        constructor();
+        speed: number;
+        threshold: number;
+        touchSwipe: ut.Math.Vector2;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Move): Move;
+        static _toPtr(p: number, v: Move): void;
+        static _tempHeapPtr(v: Move): number;
+        static _dtorFn(v: Move): void;
+    }
+    class MoveWithInput extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: MoveWithInput): MoveWithInput;
+        static _toPtr(p: number, v: MoveWithInput): void;
+        static _tempHeapPtr(v: MoveWithInput): number;
+        static _dtorFn(v: MoveWithInput): void;
+    }
+    class PlayerTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: PlayerTag): PlayerTag;
+        static _toPtr(p: number, v: PlayerTag): void;
+        static _tempHeapPtr(v: PlayerTag): number;
+        static _dtorFn(v: PlayerTag): void;
+    }
+    class Boundaries extends ut.Component {
+        constructor();
+        minX: number;
+        maxX: number;
+        minY: number;
+        maxY: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Boundaries): Boundaries;
+        static _toPtr(p: number, v: Boundaries): void;
+        static _tempHeapPtr(v: Boundaries): number;
+        static _dtorFn(v: Boundaries): void;
+    }
+    class Shoot extends ut.Component {
+        constructor();
+        bulletGroup: string;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Shoot): Shoot;
+        static _toPtr(p: number, v: Shoot): void;
+        static _tempHeapPtr(v: Shoot): number;
+        static _dtorFn(v: Shoot): void;
+    }
+    class BulletTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: BulletTag): BulletTag;
+        static _toPtr(p: number, v: BulletTag): void;
+        static _tempHeapPtr(v: BulletTag): number;
+        static _dtorFn(v: BulletTag): void;
+    }
+    class WallTag extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: WallTag): WallTag;
+        static _toPtr(p: number, v: WallTag): void;
+        static _tempHeapPtr(v: WallTag): number;
+        static _dtorFn(v: WallTag): void;
+    }
 }
 declare namespace ut{
 }
@@ -215,7 +300,9 @@ declare namespace ut{
         [module: string]: any;
         game: {
             [data: string]: EntityGroupData;
-            NewEntityGroup: EntityGroupData;
+            MainGroup: EntityGroupData;
+            BulletGroup: EntityGroupData;
+            Background: EntityGroupData;
         }
     }
 }

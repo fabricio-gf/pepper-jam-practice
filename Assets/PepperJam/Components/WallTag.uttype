@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "87483bc85b6f405ca67d78d9334a8a12",
+    "Name": "WallTag",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "87483bc85b6f405ca67d78d9334a8a12", "Name": "WallTag" }
+    }
+}]

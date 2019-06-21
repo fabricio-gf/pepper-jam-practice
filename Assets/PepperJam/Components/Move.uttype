@@ -1,0 +1,37 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "66d0889c37e84d51ade4592c45aaee35",
+    "Name": "Move",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "d274a76759c84e7ebebd7bdca183ec88",
+        "Name": "speed",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "ba796c3f4c42446f864024d93eab7698",
+        "Name": "threshold",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "d6ec32631d494da0b73c3e767904d280",
+        "Name": "touchSwipe",
+        "FieldType": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "66d0889c37e84d51ade4592c45aaee35", "Name": "Move" }
+    }
+}]

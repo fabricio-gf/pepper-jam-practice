@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "0a44959ee0e24f0aba3a2e9eeca0a367",
+    "Name": "Shoot",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "83ba74a8d88a4536b8e080776b0ee957",
+        "Name": "bulletGroup",
+        "FieldType": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "0a44959ee0e24f0aba3a2e9eeca0a367", "Name": "Shoot" }
+    }
+}]

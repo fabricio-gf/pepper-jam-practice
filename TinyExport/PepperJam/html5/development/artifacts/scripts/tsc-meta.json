@@ -1,45 +1,68 @@
 {
     "Success": true,
     "Diagnostics": [],
-    "Systems": [],
+    "Systems": [
+        {
+            "Name": "BulletSystem",
+            "QualifiedName": "game.BulletSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "InputMoveSystem",
+            "QualifiedName": "game.InputMoveSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        }
+    ],
     "Filters": [],
     "Behaviours": [],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 82,
+            "Duration": 96,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 127,
+            "Duration": 144,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 709,
-            "Steps": 9
+            "Duration": 606,
+            "Steps": 11
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 26,
+            "Duration": 35,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 3,
-            "Steps": 0
+            "Duration": 20,
+            "Steps": 2
         }
     ],
     "SourceFiles": [
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/BulletSystem.ts",
+        "D:/GitHub/pepper-jam-practice/Assets/PepperJam/Scripts/InputMoveSystem.ts",
         "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "D:/GitHub/pepper-jam-practice/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "ba34288c57551cd9dee30f66fe5e998d",
-    "GeneratedAt": "Thu Jun 20 2019 17:05:08 GMT-0300 (Hora oficial do Brasil)"
+    "InputHash": "d3ef6f6c313db7ed51af4a033ed79b6a",
+    "GeneratedAt": "Fri Jun 21 2019 09:45:55 GMT-0300 (Hora oficial do Brasil)"
 }

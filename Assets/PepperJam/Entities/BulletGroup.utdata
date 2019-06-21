@@ -1,0 +1,77 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "ee3e9875d7eb42a59704356e47b2c3b6",
+    "Name": "BulletGroup",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "2abc84ad564c40c496c73673aece58ce", "Name": "Bullet" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "2abc84ad564c40c496c73673aece58ce",
+    "Name": "Bullet",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 19.59,
+                    "y": 0.21
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": -0.7071068,
+                    "w": 0.7071068
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "2e1255b50d7d4495192345a56a9fca52", "FileId": 21300030, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "66d0889c37e84d51ade4592c45aaee35", "Name": "Move" },
+        "Properties": {
+            "speed": 20
+        }
+    }, {
+        "Type": { "Id": "72cf38fe3531461798cd055c22164ded", "Name": "BulletTag" }
+    }, {
+        "Type": { "Id": "18f2e1842bf2412f9d0e23516347e821", "Name": "Boundaries" },
+        "Properties": {
+            "maxX": 0
+        }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -2.5,
+                    "y": -3,
+                    "width": 5,
+                    "height": 9
+                }
+            }
+        }
+    }]
+}]

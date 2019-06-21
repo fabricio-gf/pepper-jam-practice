@@ -1,0 +1,107 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/PepperJam/html5/development/build/runtime.js",
+                "Size": 5903374,
+                "CompressedSize": 725997
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 1970,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "Assets/TinySamples/GalaxyRaiders/Texture/GalaxyRaiders.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "2e1255b50d7d4495192345a56a9fca52", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/PepperJam/html5/development/artifacts/assets/GalaxyRaiders.jpg",
+                    "Size": 9328,
+                    "CompressedSize": 6868,
+                    "Object": { "$TypeId": 10, "Guid": "2e1255b50d7d4495192345a56a9fca52", "FileId": 2800000, "Type": 3 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/PepperJam/html5/development/artifacts/assets/GalaxyRaiders_a.png",
+                    "Size": 2948,
+                    "CompressedSize": 2241,
+                    "Object": { "$TypeId": 10, "Guid": "2e1255b50d7d4495192345a56a9fca52", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/PepperJam/html5/development/build/entities.js",
+                "Size": 2911,
+                "CompressedSize": 958
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "MainGroup",
+                    "Size": 2830,
+                    "CompressedSize": 881
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/PepperJam/html5/development/build/bindings.js",
+                "Size": 87765,
+                "CompressedSize": 7184
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/PepperJam/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Size": 7979,
+                    "CompressedSize": 1886
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/PepperJam/html5/development/build/main.js",
+                "Size": 2203,
+                "CompressedSize": 773
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/PepperJam/html5/development/build/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}
