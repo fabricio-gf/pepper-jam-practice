@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 7158e66b2246d8149bea860f5ad5b874
+guid: 17d4603a3ffb54f4baeedf6057f1587f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: moto_0
-    21300002: moto_1
-    21300004: moto_2
-    21300006: moto_3
-    21300008: moto_4
-    21300010: moto_5
+    21300000: policia_0
+    21300002: policia_1
+    21300004: policia_2
+    21300006: policia_3
+    21300008: policia_4
+    21300010: policia_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -112,121 +112,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: moto_0
+      name: policia_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 213.33333
-        height: 100
+        y: 200
+        width: 300
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 833ca262cd59ef34b9f63406a954697d
+      spriteID: d3b2446a501de5f41818c36fb6ad402b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moto_1
+      name: policia_1
       rect:
         serializedVersion: 2
-        x: 213
-        y: 100
-        width: 213.33333
-        height: 100
+        x: 300
+        y: 200
+        width: 300
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7ad0ca398e7c9142879c278fa4ddd43
+      spriteID: 9bf3df157ecb4244eb587a09dc77f35e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moto_2
+      name: policia_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 100
-        width: 213.33333
-        height: 100
+        x: 600
+        y: 200
+        width: 300
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03bdc9f58229faf41bdcf3e79a80d32e
+      spriteID: 1d4927367cf7bb846aaf868770f30c86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moto_3
+      name: policia_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 213.33333
-        height: 100
+        width: 300
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2289ffc25e0675f44bb32e0b9cb0092b
+      spriteID: d344f60bc969a4341b7428ff5f449f4b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moto_4
+      name: policia_4
       rect:
         serializedVersion: 2
-        x: 213
+        x: 300
         y: 0
-        width: 213.33333
-        height: 100
+        width: 300
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c7d8cb3f49dea6479e837bce812eecb
+      spriteID: 6025a6fd7de5b37419b05b6124659b50
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moto_5
+      name: policia_5
       rect:
         serializedVersion: 2
-        x: 426
+        x: 600
         y: 0
-        width: 213.33333
-        height: 100
+        width: 300
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d7f0d5f796d9245a1f680f02c16101
+      spriteID: 12e9b73f78087df49b6976ce10aecb8e
       vertices: []
       indices: 
       edges: []
@@ -234,7 +234,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0b14ba342d6b9494dbd1710ea3fc1d9e
+    spriteID: 4bcb36750ca7edc408de848527bc82aa
     vertices: []
     indices: 
     edges: []

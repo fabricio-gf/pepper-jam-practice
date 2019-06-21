@@ -31,8 +31,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(currentTime <= 0)
         {
-            Instantiate(Enemies[0], PositionZero - new Vector2(0, PositionOffset*Random.Range(0,5)), Quaternion.identity, EnemiesParent);
-            currentTime = SpawnRate;
+            Instantiate(Enemies[Random.Range(0,Enemies.Length)], PositionZero - new Vector2(0, PositionOffset*Random.Range(0,5)), Quaternion.identity, EnemiesParent);
+            currentTime += SpawnRate;
         }
     }
 
