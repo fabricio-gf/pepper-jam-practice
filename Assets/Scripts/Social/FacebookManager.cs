@@ -259,7 +259,7 @@ public class FacebookManager : MonoBehaviour
                 }
                 print("index " + index);
                 FriendsText.text += ((Dictionary<string, object>)dict)["name"];
-                FB.API("/" + ((Dictionary<string, object>)dict)["id"] + "/picture?typeof=large", HttpMethod.GET, GetFriendPictureCallback);
+                FB.API("/" + ((Dictionary<string, object>)dict)["id"] + "/picture?type=large", HttpMethod.GET, GetFriendPictureCallback);
                 index++;
             }
         });
